@@ -229,6 +229,35 @@
       }
     }
 
+    /* ─── MOBILE BRAND (LOGO) ────────────────────────── */
+    .mobile-brand {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-brand {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1040;
+        height: 48px;
+        padding: 0 18px;
+        border-radius: 100px;
+        background: rgba(43, 14, 6, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        font-family: var(--f-display);
+        font-size: 14px;
+        color: var(--c-areia);
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+      }
+    }
+
     /* ─── MOBILE MENU OVERLAY ────────────────────────── */
     .mobile-menu {
       display: none;
@@ -504,6 +533,12 @@
       #identificacao::before {
         border-top-left-radius: 80px;
         border-top-right-radius: 80px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #identificacao {
+        padding-top: 124px;
       }
     }
 
@@ -1821,6 +1856,43 @@
       transition-delay: 1.2s;
     }
 
+    /* Espaçador que prolonga o "pin" do hero no mobile (leitura) */
+    .hero-spacer {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-spacer {
+        display: block;
+        height: 35vh;
+      }
+    }
+
+    /* ─── MOBILE: HERO STARTS CLEAN, REVEALS ON SCROLL ─ */
+    @media (max-width: 768px) {
+
+      /* image starts sharp — face fully visible, no blur */
+      #hero .hero__image--mobile.reveal.visible {
+        filter: none;
+        transition: filter 0.6s ease;
+      }
+
+      /* hero text hidden until the user scrolls into the hero */
+      #hero .hero__content {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+
+      /* once scrolling begins: blur the photo + fade the text in */
+      #hero.hero--revealed .hero__image--mobile.reveal.visible {
+        filter: blur(8px);
+      }
+
+      #hero.hero--revealed .hero__content {
+        opacity: 1;
+      }
+    }
+
     /* ─── SOBRE: EDITORIAL GLASSMORPHISM ─────────────── */
     .sobre-editorial {
       position: relative;
@@ -2221,6 +2293,8 @@
     </ul>
   </nav>
 
+  <span class="mobile-brand">Psicóloga Karol</span>
+
   <button class="burger" id="burger" aria-label="Abrir menu">
     <span class="burger__line"></span>
     <span class="burger__line"></span>
@@ -2269,6 +2343,9 @@
       <div class="scroll-indicator-line"></div>
     </div>
   </section>
+
+  <!-- Espaçador mobile: mantém o hero fixo por mais tempo para leitura -->
+  <div class="hero-spacer" aria-hidden="true"></div>
 
   <!-- IDENTIFICAÇÃO -->
   <section id="identificacao">

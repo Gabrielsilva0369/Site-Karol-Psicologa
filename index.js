@@ -26,9 +26,15 @@ window.addEventListener('scroll', () => {
       : 'rgba(255,255,255,0.5)';
   });
 
-  // Hero 3D Apple Modal Effect
+  // Mobile: reveal hero blur + text only after the user starts scrolling
   const hero = document.getElementById('hero');
-  if (hero && window.scrollY <= window.innerHeight * 1.5) {
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (hero) {
+    hero.classList.toggle('hero--revealed', isMobile && window.scrollY > 30);
+  }
+
+  // Hero 3D Apple Modal Effect (desktop only — mantém o texto nítido no mobile)
+  if (hero && !isMobile && window.scrollY <= window.innerHeight * 1.5) {
     const progress = Math.min(window.scrollY / window.innerHeight, 1);
     
     // Scale: 1 -> 0.95
