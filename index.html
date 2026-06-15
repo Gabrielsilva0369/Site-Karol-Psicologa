@@ -1,0 +1,2863 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ─── SEO PRIMÁRIO ─────────────────────────────── -->
+  <title>Psicóloga Karol Moreno — Especialista em Borderline, DBT e TCC</title>
+  <meta name="description"
+    content="Psicoterapia humanizada com a psicóloga Karol Moreno. Atendimento online e presencial especializado em Transtorno de Personalidade Borderline (TPB), DBT e TCC.">
+  <meta name="author" content="Karol Moreno">
+  <meta name="robots" content="index, follow">
+  <!-- TODO: trocar pelo domínio real quando publicar -->
+  <link rel="canonical" href="https://www.karolpsicologa.com.br/">
+
+  <!-- ─── OPEN GRAPH (WhatsApp / Facebook / Instagram) ─ -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Karol Moreno — Psicóloga">
+  <meta property="og:title" content="Psicóloga Karol Moreno — Especialista em Borderline, DBT e TCC">
+  <meta property="og:description"
+    content="Psicoterapia humanizada e acolhedora. Atendimento online e presencial especializado em Borderline, DBT e TCC.">
+  <meta property="og:url" content="https://www.karolpsicologa.com.br/">
+  <meta property="og:image" content="https://www.karolpsicologa.com.br/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Psicóloga Karol Moreno">
+
+  <!-- ─── TWITTER CARD ─────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Psicóloga Karol Moreno — Especialista em Borderline, DBT e TCC">
+  <meta name="twitter:description"
+    content="Psicoterapia humanizada e acolhedora. Atendimento online e presencial especializado em Borderline, DBT e TCC.">
+  <meta name="twitter:image" content="https://www.karolpsicologa.com.br/og-image.jpg">
+
+  <!-- ─── FAVICON ──────────────────────────────────── -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <meta name="theme-color" content="#2B0E06">
+
+  <!-- ─── DADOS ESTRUTURADOS (JSON-LD) ─────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Psychologist", "LocalBusiness"],
+    "name": "Karol Moreno — Psicóloga",
+    "description": "Psicoterapia humanizada especializada em Transtorno de Personalidade Borderline, com atendimento online e presencial nas abordagens DBT e TCC.",
+    "url": "https://www.karolpsicologa.com.br/",
+    "image": "https://www.karolpsicologa.com.br/og-image.jpg",
+    "priceRange": "$$",
+    "medicalSpecialty": "Psychiatric",
+    "knowsAbout": [
+      "Transtorno de Personalidade Borderline",
+      "Terapia Dialética Comportamental (DBT)",
+      "Terapia Cognitivo-Comportamental (TCC)",
+      "Psicoterapia",
+      "Saúde mental"
+    ],
+    "availableLanguage": "pt-BR",
+    "areaServed": "BR",
+    "availableService": {
+      "@type": "MedicalTherapy",
+      "name": "Psicoterapia individual (online e presencial)"
+    },
+    "sameAs": [
+      "https://www.instagram.com/terapeuta.karol_/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cantarell:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --c-escuro: #2B0E06;
+      --c-marrom: #3B1A0A;
+      --c-vinho: #5C1F1A;
+      --c-terracota: #B84500;
+      --c-caramelo: #B07848;
+      --c-areia: #DCC48A;
+      --c-creme: #F5EDE0;
+      --c-linho: #FAF4ED;
+      --f-display: 'Playfair Display', Georgia, serif;
+      --f-titulo: 'Playfair Display', Georgia, serif;
+      --f-corpo: 'Cantarell', Helvetica, sans-serif;
+      --r-sm: 8px;
+      --r-md: 16px;
+      --r-lg: 24px;
+      --r-pill: 100px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--f-corpo);
+      background: rgb(43, 0, 0);
+      color: var(--c-marrom);
+    }
+
+    /* ─── NAV ────────────────────────────────────────── */
+    /* ─── NAV: FLOATING GLASS DOCK ───────────────────── */
+    .nav {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      background: rgba(43, 14, 6, 0.45);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 8px 12px 8px 24px;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      width: max-content;
+      max-width: 90vw;
+    }
+
+    .nav__brand {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-size: 14px;
+      color: var(--c-areia);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      display: block;
+      padding: 8px 16px;
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      border-radius: 100px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .nav__links a:hover,
+    .nav__links a.active-link {
+      color: var(--c-areia);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+    }
+
+    /* ─── BURGER BUTTON ──────────────────────────────── */
+    .burger {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1100;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(43, 14, 6, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      transition: background 0.3s;
+    }
+
+    .burger__line {
+      width: 20px;
+      height: 2px;
+      background: var(--c-areia);
+      border-radius: 2px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s;
+    }
+
+    .burger.open .burger__line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger.open .burger__line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open .burger__line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+    }
+
+    /* ─── MOBILE MENU OVERLAY ────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1050;
+      background: rgba(43, 14, 6, 0.97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: flex;
+      }
+    }
+
+    .mobile-menu__brand {
+      font-family: var(--f-display);
+      font-size: 13px;
+      color: rgba(220, 196, 138, 0.4);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .mobile-menu a {
+      font-family: var(--f-display);
+      font-size: clamp(28px, 7vw, 40px);
+      font-weight: 700;
+      color: rgba(245, 237, 224, 0.5);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      padding: 8px 0;
+      transition: color 0.2s, transform 0.2s;
+      transform: translateY(16px);
+      opacity: 0;
+      transition: color 0.2s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    }
+
+    .mobile-menu.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-menu.open a:nth-child(2) { transition-delay: 0.05s; }
+    .mobile-menu.open a:nth-child(3) { transition-delay: 0.1s; }
+    .mobile-menu.open a:nth-child(4) { transition-delay: 0.15s; }
+    .mobile-menu.open a:nth-child(5) { transition-delay: 0.2s; }
+    .mobile-menu.open a:nth-child(6) { transition-delay: 0.25s; }
+    .mobile-menu.open a:nth-child(7) { transition-delay: 0.3s; }
+    .mobile-menu.open a:nth-child(8) { transition-delay: 0.35s; }
+    .mobile-menu.open a:nth-child(9) { transition-delay: 0.4s; }
+
+    .mobile-menu a:hover {
+      color: var(--c-areia);
+      transform: translateX(8px);
+    }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    #hero {
+      position: sticky;
+      top: 0;
+      z-index: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--c-escuro);
+      padding-top: 52px;
+      transform: scale(var(--hero-scale, 1));
+      transform-origin: top center;
+      filter: brightness(var(--hero-brightness, 1)) blur(var(--hero-blur, 0px));
+      will-change: transform, filter;
+    }
+
+    .hero__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+      pointer-events: none;
+      mask-image: linear-gradient(to top, transparent 0%, black 15%);
+      -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%);
+    }
+
+    .hero__image--mobile {
+      display: none;
+    }
+
+    .hero__image--desktop {
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .hero__image--desktop {
+        display: none;
+      }
+
+      .hero__image--mobile {
+        display: block;
+        object-position: 80% center;
+        filter: blur(100px);
+      }
+    }
+
+    .hero__content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 10;
+      max-width: 700px;
+      width: 100%;
+      padding: 0 8%;
+      pointer-events: none;
+    }
+
+    .hero__title {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(32px, 4.5vw, 48px);
+      color: var(--c-creme);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+
+    .hero__bar {
+      width: 80px;
+      height: 1.5px;
+      background: var(--c-areia);
+      opacity: 0.4;
+      margin-bottom: 24px;
+    }
+
+    .hero__subtitle {
+      font-family: var(--f-corpo);
+      font-size: 16px;
+      color: rgba(245, 237, 224, 0.8);
+      line-height: 1.6;
+      max-width: 500px;
+      margin-bottom: 48px;
+    }
+
+    .hero__footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
+
+    .hero__icon {
+      width: 32px;
+      height: 32px;
+      color: var(--c-areia);
+      opacity: 0.8;
+    }
+
+    .hero__tag {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--c-areia);
+      opacity: 0.9;
+    }
+
+    .hero__dot {
+      color: rgba(220, 196, 138, 0.3);
+      font-size: 12px;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 110px;
+      right: 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      z-index: 5;
+    }
+
+    .scroll-indicator-text {
+      font-family: var(--f-corpo);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(43, 14, 6, 1);
+      opacity: 0.8;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    .scroll-indicator-line {
+      width: 1px;
+      height: 64px;
+      background: rgba(43, 14, 6, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-indicator-line::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--c-areia);
+      animation: scrollDown 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+    /* ─── IDENTIFICAÇÃO ──────────────────────────────── */
+    #identificacao {
+      background: var(--c-escuro);
+      position: relative;
+      padding: 160px 8% 120px;
+      overflow: visible;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      margin-top: -80px;
+      z-index: 10;
+      box-shadow: 0 -40px 100px rgba(0, 0, 0, 0.5);
+    }
+
+    #identificacao::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    @media (min-width: 900px) {
+
+      #identificacao,
+      #identificacao::before {
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+      }
+    }
+
+    .ident-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 900px) {
+      .ident-grid {
+        grid-template-columns: 40% 1fr;
+        gap: 80px;
+      }
+
+      .ident-sticky {
+        position: sticky;
+        top: 120px;
+      }
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .bento-grid {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .bento-wide {
+        grid-column: span 7;
+      }
+
+      .bento-narrow {
+        grid-column: span 5;
+      }
+
+      .bento-full {
+        grid-column: span 12;
+      }
+    }
+
+    .ident-card {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 220px;
+      border-radius: var(--r-md);
+      z-index: 1;
+    }
+
+    .card-dark {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-accent {
+      background: var(--c-terracota);
+    }
+
+    .card-watermark {
+      position: absolute;
+      right: -10px;
+      bottom: -30px;
+      font-family: var(--f-display);
+      font-style: normal;
+      font-size: 160px;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--c-areia);
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: -1;
+      transition: transform 0.4s ease-out;
+    }
+
+    .ident-card:hover .card-watermark {
+      transform: scale(1.05) translate(-10px, -10px);
+    }
+
+    /* ─── VALIDAÇÃO ──────────────────────────────────── */
+    #validacao {
+      padding: 120px 8% 140px;
+      background: #2B0E06;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #validacao .v-oval {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: rotateSlow 30s linear infinite;
+    }
+
+    #validacao .v-oval-a {
+      top: -60px;
+      right: -60px;
+      width: 380px;
+      height: 190px;
+      border: 1.5px solid rgba(176, 120, 72, 0.1);
+    }
+
+    #validacao .v-oval-b {
+      bottom: -40px;
+      left: -40px;
+      width: 300px;
+      height: 150px;
+      border: 1.5px solid rgba(184, 69, 0, 0.08);
+      animation-direction: reverse;
+    }
+
+    #validacao .v-ray {
+      position: absolute;
+      top: -10%;
+      left: 42%;
+      width: 30%;
+      height: 120%;
+      background: linear-gradient(170deg, rgba(201, 135, 60, 0.06) 0%, transparent 55%);
+      transform: rotate(12deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #validacao .v-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      #validacao {
+        padding: 100px 6% 120px;
+      }
+
+      #validacao .v-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    #validacao .v-tag {
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+
+    #validacao .v-eyebrow {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(245, 237, 224, 0.28);
+      margin-bottom: 18px;
+    }
+
+    #validacao .v-h2 {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: clamp(52px, 8vw, 100px);
+      color: #F5EDE0;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    #validacao .v-shimmer {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: clamp(52px, 8vw, 100px);
+      line-height: 0.9;
+      margin: 0 0 40px;
+      background: linear-gradient(90deg, #B84500 0%, #DCC48A 50%, #B84500 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    #validacao .v-bar {
+      width: 80px;
+      height: 2px;
+      background: rgba(201, 135, 60, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    #validacao .v-bar-fill {
+      height: 100%;
+      background: #B84500;
+      border-radius: 4px;
+      animation: revealBar 2s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+    }
+
+    #validacao .v-body {
+      font-size: 15px;
+      color: rgba(245, 237, 224, 0.45);
+      line-height: 1.85;
+      max-width: 340px;
+    }
+
+    @media (max-width: 768px) {
+      #validacao .v-body {
+        max-width: 100%;
+      }
+    }
+
+    #validacao .v-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #validacao .v-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    #validacao .v-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(184, 69, 0, 0.4);
+    }
+
+    #validacao .v-card-a {
+      border-left: 3px solid #B84500;
+    }
+
+    #validacao .v-card-b {
+      border-left: 3px solid #B07848;
+    }
+
+    #validacao .v-wm {
+      position: absolute;
+      right: -6px;
+      bottom: -20px;
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: 80px;
+      color: #DCC48A;
+      opacity: 0.06;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #validacao .v-card-title {
+      font-family: var(--f-titulo);
+      font-size: 16px;
+      font-weight: 700;
+      color: #F5EDE0;
+      margin-bottom: 8px;
+    }
+
+    #validacao .v-card-body {
+      font-size: 14px;
+      color: rgba(245, 237, 224, 0.55);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    #validacao .v-cta {
+      background: #B84500;
+      border-radius: 16px;
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    #validacao .v-cta:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(184, 69, 0, 0.5);
+    }
+
+    #validacao .v-cta-ot {
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      width: 110px;
+      height: 55px;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #validacao .v-cta-ob {
+      position: absolute;
+      bottom: -14px;
+      left: 14px;
+      width: 70px;
+      height: 35px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #validacao .v-cta-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #validacao .v-dot {
+      flex-shrink: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      margin-top: 7px;
+      display: block;
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    #validacao .v-cta-kicker {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 6px;
+    }
+
+    #validacao .v-cta-text {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ─── ESPECIALIZAÇÃO ─────────────────────────────── */
+    #especializacao {
+      padding: 120px 8%;
+      background: var(--c-linho);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #especializacao .espec-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* heading */
+    #especializacao .espec-head {
+      max-width: 800px;
+      margin: 0 auto 72px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #especializacao .espec-head-tag {
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+
+    #especializacao .espec-h2 {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 60px);
+      color: var(--c-marrom);
+      line-height: 1.0;
+      margin-bottom: 24px;
+    }
+
+    #especializacao .espec-h2 em {
+      color: var(--c-terracota);
+      font-style: normal;
+    }
+
+    #especializacao .espec-bar {
+      width: 80px;
+      height: 2px;
+      background: rgba(176, 120, 72, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    #especializacao .espec-bar-fill {
+      height: 100%;
+      background: var(--c-terracota);
+      animation: revealBar 2s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+    }
+
+    #especializacao .espec-sub {
+      font-size: 16px;
+      color: rgba(59, 26, 10, 0.65);
+      line-height: 1.7;
+    }
+
+    /* cards grid */
+    #especializacao .espec-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      #especializacao .espec-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #especializacao .espec-card {
+      background: var(--c-marrom);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    #especializacao .espec-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 32px 64px rgba(43, 14, 6, 0.25);
+    }
+
+    #especializacao .espec-card::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: 5%;
+      width: 35%;
+      height: 140%;
+      background: linear-gradient(170deg, rgba(201, 135, 60, 0.12) 0%, transparent 60%);
+      transform: rotate(15deg);
+      pointer-events: none;
+    }
+
+    #especializacao .espec-card-num {
+      position: absolute;
+      right: -16px;
+      bottom: -40px;
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: 180px;
+      color: rgba(255, 255, 255, 0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #especializacao .espec-kicker {
+      font-family: var(--f-corpo);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--c-caramelo);
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    #especializacao .espec-card-title {
+      font-family: var(--f-titulo);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--c-creme);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    #especializacao .espec-card-thin {
+      width: 40px;
+      height: 2px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    #especializacao .espec-card-body {
+      font-size: 14px;
+      color: rgba(245, 237, 224, 0.6);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    #especializacao .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #especializacao .skill-pill {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(245, 237, 224, 0.7);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    #especializacao .skill-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--c-creme);
+    }
+
+    /* bottom quote card */
+    #especializacao .espec-quote {
+      background: linear-gradient(135deg, #3B1A0A 0%, #5C1F1A 100%);
+      border-radius: 20px;
+      padding: 40px 48px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+      #especializacao .espec-quote {
+        flex-direction: column;
+      }
+    }
+
+    #especializacao .espec-quote-oval {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: rotateSlow 20s linear infinite;
+    }
+
+    #especializacao .espec-quote-oval-a {
+      top: -30px;
+      right: -30px;
+      width: 160px;
+      height: 80px;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #especializacao .espec-quote-oval-b {
+      bottom: -20px;
+      left: 40px;
+      width: 100px;
+      height: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation-direction: reverse;
+    }
+
+    #especializacao .espec-quote-text {
+      font-family: var(--f-titulo);
+      font-weight: 700;
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: #fff;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    #especializacao .espec-quote-badge {
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 16px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    #especializacao .espec-quote-badge-label {
+      font-family: var(--f-corpo);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 4px;
+    }
+
+    #especializacao .espec-quote-badge-val {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+
+    /* legacy split/white-card kept for other sections */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .split {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .split-left {
+      background: var(--c-marrom);
+      border-radius: var(--r-md);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .split-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .white-card {
+      background: white;
+      border: 1px solid rgba(176, 120, 72, 0.2);
+      border-radius: var(--r-md);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .white-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(43, 14, 6, 0.1);
+    }
+
+    /* ─── SOBRE ──────────────────────────────────────── */
+    #sobre {
+      padding: 120px 8%;
+      background: rgba(245, 237, 224, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ─── COMO FUNCIONA ──────────────────────────────── */
+    #como-funciona {
+      padding: 120px 8%;
+      background: rgba(43, 14, 6, 0.8);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      position: relative;
+      z-index: 10;
+    }
+
+    .pillar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: var(--c-linho);
+      border: 1px solid rgba(176, 120, 72, 0.15);
+      border-radius: var(--r-sm);
+      padding: 24px 32px;
+      color: var(--c-marrom);
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pillar-item:hover {
+      transform: translateX(8px);
+      box-shadow: 0 12px 24px rgba(43, 14, 6, 0.05);
+      background: white;
+    }
+
+    .pillar-num {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--c-caramelo);
+      opacity: 0.6;
+      min-width: 48px;
+    }
+
+    /* ─── DESENVOLVIMENTO ────────────────────────────── */
+    #desenvolvimento {
+      padding: 120px 8%;
+      background-image: url('./karolbackground.webp');
+      background-repeat: repeat;
+      background-size: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #desenvolvimento .dev-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* heading */
+    #desenvolvimento .dev-head {
+      margin-bottom: 72px;
+    }
+
+    #desenvolvimento .dev-h2 {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 60px);
+      color: var(--c-marrom);
+      line-height: 1.0;
+      margin-bottom: 24px;
+    }
+
+    #desenvolvimento .dev-bar {
+      width: 80px;
+      height: 2px;
+      background: rgba(176, 120, 72, 0.25);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    #desenvolvimento .dev-bar-fill {
+      height: 100%;
+      background: var(--c-terracota);
+      animation: revealBar 2s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+    }
+
+    #desenvolvimento .dev-sub {
+      font-size: 16px;
+      color: rgba(59, 26, 10, 0.6);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* decorative ovals */
+    #desenvolvimento .dev-oval {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: rotateSlow 30s linear infinite;
+    }
+
+    #desenvolvimento .dev-oval-a {
+      top: -40px;
+      right: -40px;
+      width: 280px;
+      height: 140px;
+      border: 1.5px solid rgba(176, 120, 72, 0.12);
+    }
+
+    #desenvolvimento .dev-oval-b {
+      bottom: -30px;
+      left: -30px;
+      width: 200px;
+      height: 100px;
+      border: 1px solid rgba(176, 120, 72, 0.08);
+      animation-direction: reverse;
+    }
+
+    /* cards grid */
+    .dev-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .dev-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .dev-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    /* enhanced white cards for dev section */
+    #desenvolvimento .white-card {
+      position: relative;
+      overflow: hidden;
+      padding: 36px 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    #desenvolvimento .white-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 48px rgba(43, 14, 6, 0.15);
+    }
+
+    #desenvolvimento .dev-num {
+      position: absolute;
+      right: -8px;
+      bottom: -28px;
+      font-family: var(--f-display);
+      font-style: normal;
+      font-weight: 900;
+      font-size: 120px;
+      color: var(--c-marrom);
+      opacity: 0.05;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #desenvolvimento .dev-dot-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    #desenvolvimento .white-card:hover .dev-dot-wrap {
+      transform: scale(1.15);
+    }
+
+    #desenvolvimento .dev-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    #desenvolvimento .dev-card-title {
+      font-family: var(--f-titulo);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--c-marrom);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    #desenvolvimento .dev-card-body {
+      font-size: 14px;
+      color: rgba(59, 26, 10, 0.65);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* bottom stat strip */
+    #desenvolvimento .dev-stat-row {
+      display: flex;
+      gap: 0;
+      margin-top: 48px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      #desenvolvimento .dev-stat-row {
+        flex-direction: column;
+      }
+    }
+
+    #desenvolvimento .dev-stat {
+      flex: 1;
+      padding: 28px 32px;
+      text-align: center;
+      border-right: 1px solid rgba(176, 120, 72, 0.12);
+      transition: background 0.2s;
+    }
+
+    #desenvolvimento .dev-stat:last-child {
+      border-right: none;
+    }
+
+    #desenvolvimento .dev-stat:hover {
+      background: rgba(176, 120, 72, 0.04);
+    }
+
+    #desenvolvimento .dev-stat-val {
+      font-family: var(--f-titulo);
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--c-terracota);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    #desenvolvimento .dev-stat-label {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(59, 26, 10, 0.5);
+    }
+
+    /* ─── FAQ ────────────────────────────────────────── */
+    #faq {
+      padding: 120px 8%;
+      background: rgba(43, 14, 6, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 10;
+    }
+
+    details.faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--r-sm);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    details.faq-item[open] {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    summary.faq-question {
+      padding: 24px 32px;
+      font-family: var(--f-titulo);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--c-creme);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary.faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    summary.faq-question::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--c-caramelo);
+      transition: transform 0.3s;
+    }
+
+    details.faq-item[open] summary.faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 32px 32px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(245, 237, 224, 0.7);
+    }
+
+    /* ─── CTA ────────────────────────────────────────── */
+    #cta {
+      padding: 160px 8%;
+      background: var(--c-escuro);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* ─── COMPONENTES ────────────────────────────────── */
+    .tag {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: var(--r-pill);
+      display: inline-block;
+    }
+
+    .tag--caramelo {
+      background: rgba(176, 120, 72, 0.15);
+      color: var(--c-caramelo);
+      border: 1px solid rgba(176, 120, 72, 0.3);
+    }
+
+    .tag--dark {
+      background: var(--c-marrom);
+      color: var(--c-areia);
+    }
+
+    .tag--linho {
+      background: var(--c-linho);
+      color: var(--c-marrom);
+      border: 1px solid rgba(176, 120, 72, 0.3);
+    }
+
+    .btn-primary {
+      font-family: var(--f-titulo);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--c-creme);
+      background: var(--c-terracota);
+      border-radius: var(--r-pill);
+      padding: 14px 36px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184, 69, 0, 0.35);
+    }
+
+    .btn-secondary {
+      font-family: var(--f-titulo);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--c-creme);
+      background: var(--c-terracota);
+      border: 2px solid var(--c-terracota);
+      border-radius: var(--r-pill);
+      padding: 12px 34px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: transparent;
+      color: var(--c-terracota);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      font-family: var(--f-corpo);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-caramelo);
+      background: transparent;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      padding: 12px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1.5px solid var(--c-areia);
+      transition: color 0.2s, gap 0.2s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--c-terracota);
+      gap: 14px;
+      border-color: var(--c-terracota);
+    }
+
+    .btn-ghost::after {
+      content: '→';
+    }
+
+    /* ─── ANIMATIONS ─────────────────────────────────── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shimmer {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+
+      50% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    @keyframes rotateSlow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes revealBar {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .anim-lift-box {
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    .anim-lift-box:hover {
+      transform: translateY(-12px) scale(1.04);
+      box-shadow: 0 24px 48px rgba(184, 69, 0, 0.5);
+    }
+
+    .anim-rotate-oval {
+      border: 2px solid rgba(245, 237, 224, 0.15);
+      border-radius: 50%;
+      animation: rotateSlow 12s linear infinite;
+    }
+
+    @keyframes pulseCTA {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(184, 69, 0, 0);
+      }
+
+      50% {
+        box-shadow: 0 0 0 20px rgba(184, 69, 0, 0.2);
+      }
+    }
+
+    .anim-pulse {
+      animation: pulseCTA 2s ease-in-out infinite;
+      border-radius: var(--r-pill);
+    }
+
+    /* ─── REVEAL ─────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    /* ─── HERO BLUR REVEALS ───────────────────────────── */
+    #hero .hero__image.reveal {
+      opacity: 0;
+      filter: blur(40px);
+      transform: scale(1.05);
+      transition: opacity 1.5s ease-out, filter 1.5s ease-out, transform 1.5s ease-out;
+      transition-delay: 0.3s;
+    }
+
+    #hero .hero__image.reveal.visible {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+
+    @media (max-width: 1024px) {
+      #hero .hero__image--mobile.reveal.visible {
+        filter: blur(8px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero__content {
+        top: 44%;
+        padding: 0 6%;
+        max-width: 100%;
+      }
+
+      .hero__title {
+        font-size: clamp(24px, 7vw, 36px);
+        max-width: 100%;
+        margin-bottom: 16px;
+      }
+
+      .hero__subtitle {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 32px;
+      }
+
+      .hero__footer {
+        flex-wrap: wrap;
+        white-space: normal;
+        gap: 8px;
+      }
+
+      .hero__tag {
+        font-size: 10px;
+      }
+
+      .hero__icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    #hero .hero__content .reveal,
+    #hero .scroll-indicator.reveal {
+      opacity: 0;
+      filter: blur(16px);
+      transform: translateY(20px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #hero .hero__content .reveal.visible,
+    #hero .scroll-indicator.reveal.visible {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    #hero .hero__content .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    #hero .hero__content .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    #hero .hero__content .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    #hero .scroll-indicator.reveal {
+      transition-delay: 1.2s;
+    }
+
+    /* ─── SOBRE: EDITORIAL GLASSMORPHISM ─────────────── */
+    .sobre-editorial {
+      position: relative;
+      padding: 160px 8%;
+      background: var(--c-linho);
+      overflow: hidden;
+    }
+
+    .sobre-editorial::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40%;
+      width: 1px;
+      background: rgba(176, 120, 72, 0.2);
+    }
+
+    .sobre-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 900px) {
+      .sobre-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+    }
+
+    .sobre-image-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .sobre-image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 32px 64px rgba(43, 14, 6, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+
+    .sobre-decor-oval {
+      position: absolute;
+      top: 40px;
+      left: -30px;
+      z-index: 2;
+      border-color: rgba(255, 255, 255, 0.8);
+      width: 120px;
+      height: 60px;
+    }
+
+    .sobre-glass-card {
+      background: rgba(250, 244, 237, 0.45);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 32px;
+      padding: 56px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 3;
+    }
+
+    @media (min-width: 900px) {
+      .sobre-glass-card {
+        margin: 0;
+      }
+    }
+
+    .sobre-title {
+      font-family: var(--f-display);
+      font-style: normal;
+      font-size: clamp(40px, 5vw, 64px);
+      color: var(--c-marrom);
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 899px) {
+      .sobre-glass-card {
+        padding: 32px 24px;
+      }
+    }
+
+    .sobre-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 16px;
+      color: rgba(59, 26, 10, 0.85);
+      line-height: 1.8;
+    }
+
+    /* ─── GLOWS ANIMADOS NO FUNDO ────────────────────── */
+    .sobre-bg-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(32px);
+      -webkit-filter: blur(32px);
+      z-index: 0;
+      opacity: 0.85;
+      animation: floatGlow 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    .glow-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--c-terracota);
+      top: -10%;
+      right: 10%;
+      animation-delay: 0s;
+    }
+
+    .glow-2 {
+      width: 500px;
+      height: 500px;
+      background: var(--c-caramelo);
+      bottom: -10%;
+      right: 30%;
+      animation-delay: -4s;
+    }
+
+    .glow-3 {
+      width: 300px;
+      height: 300px;
+      background: var(--c-escuro);
+      top: 40%;
+      right: -5%;
+      animation-delay: -8s;
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-40px, 60px) scale(1.1);
+      }
+
+      100% {
+        transform: translate(30px, -30px) scale(0.9);
+      }
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    .site-footer {
+      background: var(--c-marrom);
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .footer-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 8% 0;
+    }
+
+    /* Top row */
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 64px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* Brand col */
+    .footer-brand-name {
+      font-family: var(--f-display);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--c-creme);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-desc {
+      font-family: var(--f-corpo);
+      font-size: 14px;
+      color: rgba(245, 237, 224, 0.45);
+      line-height: 1.7;
+      max-width: 240px;
+      margin-bottom: 28px;
+    }
+
+    .footer-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--c-terracota);
+      color: var(--c-creme);
+      font-family: var(--f-corpo);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: var(--r-pill);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .footer-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184, 69, 0, 0.4);
+    }
+
+    /* Nav col */
+    .footer-col-label {
+      font-family: var(--f-corpo);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--c-caramelo);
+      margin-bottom: 20px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-nav-list a {
+      font-family: var(--f-corpo);
+      font-size: 14px;
+      color: rgba(245, 237, 224, 0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list a:hover {
+      color: var(--c-areia);
+    }
+
+    /* Social col */
+    .footer-social-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .footer-social-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.14);
+      transform: translateX(4px);
+    }
+
+    .footer-social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-social-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .footer-social-info-name {
+      font-family: var(--f-titulo);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--c-creme);
+    }
+
+    .footer-social-info-handle {
+      font-family: var(--f-corpo);
+      font-size: 12px;
+      color: rgba(245, 237, 224, 0.4);
+    }
+
+    /* Bottom bar */
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 8%;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-family: var(--f-corpo);
+      font-size: 12px;
+      color: rgba(245, 237, 224, 0.3);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-maranata {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .footer-maranata-logo {
+      height: 28px;
+      width: auto;
+      opacity: 0.55;
+      filter: brightness(2);
+      transition: opacity 0.2s;
+    }
+
+    .footer-maranata:hover .footer-maranata-logo {
+      opacity: 0.9;
+    }
+
+    .footer-maranata-text {
+      font-family: var(--f-corpo);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245, 237, 224, 0.3);
+      transition: color 0.2s;
+    }
+
+    .footer-maranata:hover .footer-maranata-text {
+      color: rgba(245, 237, 224, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <span class="nav__brand">Psicóloga Karol</span>
+    <ul class="nav__links">
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#identificacao">Identificação</a></li>
+      <li><a href="#validacao">Culpa</a></li>
+      <li><a href="#especializacao">Especialização</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#desenvolvimento">O Futuro</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <button class="burger" id="burger" aria-label="Abrir menu">
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+  </button>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-menu__brand">Psicóloga Karol</span>
+    <a href="#hero" class="mobile-link">Início</a>
+    <a href="#identificacao" class="mobile-link">Identificação</a>
+    <a href="#validacao" class="mobile-link">Culpa</a>
+    <a href="#especializacao" class="mobile-link">Especialização</a>
+    <a href="#sobre" class="mobile-link">Sobre</a>
+    <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+    <a href="#desenvolvimento" class="mobile-link">O Futuro</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <img src="./hero.webp" alt="Psicóloga Karol Moreno, especialista em Borderline, DBT e TCC" width="1774" height="887" fetchpriority="high" class="hero__image hero__image--desktop reveal">
+    <img src="./hero.webp" alt="Psicóloga Karol Moreno, especialista em Borderline, DBT e TCC" width="1774" height="887" fetchpriority="high" class="hero__image hero__image--mobile reveal">
+
+    <div class="hero__content">
+      <h1 class="hero__title reveal">Espaço seguro para compreender, acolher e transformar.</h1>
+      <div class="hero__bar reveal reveal-delay-1"></div>
+      <p class="hero__subtitle reveal reveal-delay-2">Psicoterapia humanizada para promover autoconhecimento, bem-estar
+        e
+        equilíbrio emocional.</p>
+
+      <div class="hero__footer reveal reveal-delay-3">
+        <svg class="hero__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path
+            d="M12 22C12 22 12 18 12 15C12 12 10 10 8 10C6 10 4 12 4 14C4 16 6 18 8 18M12 22C12 22 12 18 12 15C12 12 14 10 16 10C18 10 20 12 20 14C20 16 18 18 16 18M12 15V3M12 3L10 5M12 3L14 5" />
+        </svg>
+        <span class="hero__tag">PSICOLOGIA</span>
+        <span class="hero__dot">•</span>
+        <span class="hero__tag">ACOLHIMENTO</span>
+        <span class="hero__dot">•</span>
+        <span class="hero__tag">TRANSFORMAÇÃO</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator reveal reveal-delay-4">
+      <span class="scroll-indicator-text">Rolar</span>
+      <div class="scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- IDENTIFICAÇÃO -->
+  <section id="identificacao">
+    <div class="ident-grid">
+      <div class="ident-sticky">
+        <h2 class="reveal"
+          style="font-family:var(--f-display);font-style:normal;font-weight:700;font-size:clamp(48px,6vw,64px);color:var(--c-creme);line-height:1.05;margin-bottom:8px;">
+          O mundo interno</h2>
+        <h3 class="reveal reveal-delay-1"
+          style="font-family:var(--f-titulo);font-weight:700;font-size:clamp(24px,3vw,36px);color:var(--c-areia);line-height:1.2;margin-bottom:32px;">
+          Você se sente assim?</h3>
+        <div class="reveal reveal-delay-2"
+          style="width:80px;height:2px;background:rgba(201,135,60,0.2);border-radius:4px;overflow:hidden;margin-bottom:32px;">
+          <div
+            style="height:100%;background:var(--c-terracota);animation:revealBar 2s cubic-bezier(0.16,1,0.3,1) infinite alternate;">
+          </div>
+        </div>
+        <p class="reveal reveal-delay-3"
+          style="font-size:16px;line-height:1.8;color:rgba(245,237,224,0.75);max-width:90%;">Viver com as emoções à flor
+          da pele é exaustivo. É como caminhar sobre uma linha tênue, onde qualquer mudança sutil no ar pode parecer o
+          início de uma tempestade incontrolável.</p>
+        <p class="reveal reveal-delay-4"
+          style="font-size:16px;line-height:1.8;color:rgba(245,237,224,0.75);margin-top:16px;max-width:90%;">O silêncio
+          que se segue a um episódio de intensidade costuma ser preenchido por uma autocobrança implacável e exaustiva.
+          Mas entenda: <strong style="color:var(--c-areia);font-weight:700;">a sua dor é real</strong>, não é "drama", e
+          existe um caminho terapêutico para encontrar o seu eixo no meio de tanto caos.</p>
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-secondary reveal reveal-delay-4" style="margin-top:32px;">Quero entender minha
+          intensidade</a>
+      </div>
+
+      <div class="bento-grid">
+        <div class="card-dark anim-lift-box reveal ident-card bento-wide"
+          style="border-top:3px solid var(--c-terracota);">
+          <span class="card-watermark">01</span>
+          <p style="font-size:18px;color:var(--c-creme);margin:0;line-height:1.6;max-width:90%;">Suas emoções mudam
+            rápido… e com <strong style="color:var(--c-areia);">muita intensidade</strong></p>
+        </div>
+        <div class="card-dark anim-lift-box reveal reveal-delay-1 ident-card bento-narrow">
+          <span class="card-watermark">02</span>
+          <p style="font-size:18px;color:var(--c-creme);margin:0;line-height:1.6;max-width:90%;">Pequenas situações
+            parecem <strong style="color:var(--c-areia);">gigantes</strong></p>
+        </div>
+        <div class="card-accent anim-lift-box reveal reveal-delay-2 ident-card bento-full"
+          style="box-shadow:0 16px 40px rgba(184,69,0,0.2);">
+          <span class="card-watermark" style="color:#fff;opacity:0.15;">03</span>
+          <p style="font-size:22px;color:#fff;margin:0;line-height:1.5;font-family:var(--f-titulo);">O <strong>medo de
+              ser abandonada(o)</strong> aparece de repente</p>
+        </div>
+        <div class="card-dark anim-lift-box reveal ident-card bento-narrow">
+          <span class="card-watermark">04</span>
+          <p style="font-size:18px;color:var(--c-creme);margin:0;line-height:1.6;max-width:90%;">Relacionamentos
+            intensos e <strong style="color:var(--c-areia);">dolorosos</strong></p>
+        </div>
+        <div class="card-dark anim-lift-box reveal reveal-delay-1 ident-card bento-wide"
+          style="border-bottom:3px solid var(--c-caramelo);">
+          <span class="card-watermark">05</span>
+          <p style="font-size:18px;color:var(--c-creme);margin:0;line-height:1.6;max-width:90%;">E depois vem a culpa…
+            como se tudo fosse <strong style="color:var(--c-areia);">"demais"</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALIDAÇÃO -->
+  <section id="validacao">
+    <div class="v-oval v-oval-a"></div>
+    <div class="v-oval v-oval-b"></div>
+    <div class="v-ray"></div>
+
+    <div class="v-grid">
+
+      <div class="reveal">
+        <span class="tag tag--caramelo v-tag">Quebra de culpa</span>
+        <p class="v-eyebrow">Ouça bem:</p>
+        <h2 class="v-h2">Você<br>não é</h2>
+        <h2 class="v-shimmer">"demais"</h2>
+        <div class="v-bar">
+          <div class="v-bar-fill"></div>
+        </div>
+        <p class="v-body">Você sente de forma mais intensa — e isso tem uma explicação. Não é fraqueza. Não é exagero.
+          Não é drama.</p>
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-primary reveal" style="margin-top:32px;">Iniciar meu processo</a>
+      </div>
+
+      <div class="v-cards">
+        <div class="v-card v-card-a reveal reveal-delay-1">
+          <span class="v-wm">01</span>
+          <p class="v-card-title">Sua intensidade tem uma origem</p>
+          <p class="v-card-body">A desregulação emocional não é frescura — é um padrão neurobiológico que pode ser
+            trabalhado com as ferramentas certas.</p>
+        </div>
+        <div class="v-card v-card-b reveal reveal-delay-2">
+          <span class="v-wm">02</span>
+          <p class="v-card-title">E existe uma forma de mudar</p>
+          <p class="v-card-body">Existe um caminho terapêutico que te ensina a navegar pelas emoções — e não apenas
+            sobreviver a elas.</p>
+        </div>
+        <div class="v-cta reveal reveal-delay-3">
+          <div class="v-cta-ot"></div>
+          <div class="v-cta-ob"></div>
+          <div class="v-cta-inner">
+            <span class="v-dot"></span>
+            <div>
+              <p class="v-cta-kicker">Lembre-se disso</p>
+              <p class="v-cta-text">A sua dor é real, e existe um caminho para o outro lado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALIZAÇÃO -->
+  <section id="especializacao">
+    <div class="espec-wrap">
+
+      <!-- Heading -->
+      <div class="espec-head reveal">
+        <span class="tag tag--caramelo espec-head-tag">Especialização &amp; Abordagem</span>
+        <h2 class="espec-h2">Atendimento especializado em <em>Transtorno de Personalidade Borderline</em></h2>
+        <div class="espec-bar">
+          <div class="espec-bar-fill"></div>
+        </div>
+        <p class="espec-sub">Métodos práticos para ajudar você a lidar com emoções intensas no dia a dia. Sem
+          julgamentos. Sem rótulos que diminuem quem você é.</p>
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-secondary reveal" style="margin-top:32px;">Quero terapia especializada</a>
+      </div>
+
+      <!-- Method cards -->
+      <div class="espec-cards">
+
+        <div class="espec-card reveal reveal-delay-1" style="border-top:4px solid #B84500;">
+          <span class="espec-card-num">01</span>
+          <p class="espec-kicker">01 — Abordagem Principal</p>
+          <h3 class="espec-card-title">Terapia Dialética Comportamental (DBT)</h3>
+          <div class="espec-card-thin" style="background:#B84500;"></div>
+          <p class="espec-card-body">A abordagem padrão-ouro internacional para o TPB. Combina estratégias de aceitação
+            e mudança para regular emoções intensas, reduzir comportamentos impulsivos e construir uma vida que vale a
+            pena ser vivida.</p>
+          <div class="skill-tags">
+            <span class="skill-pill">Regulação Emocional</span>
+            <span class="skill-pill">Tolerância ao Mal-estar</span>
+            <span class="skill-pill">Efetividade Interpessoal</span>
+            <span class="skill-pill">Mindfulness</span>
+          </div>
+        </div>
+
+        <div class="espec-card reveal reveal-delay-2" style="border-top:4px solid #B07848;">
+          <span class="espec-card-num">02</span>
+          <p class="espec-kicker">02 — Abordagem Complementar</p>
+          <h3 class="espec-card-title">Terapia Cognitivo-Comportamental (TCC)</h3>
+          <div class="espec-card-thin" style="background:#B07848;"></div>
+          <p class="espec-card-body">Para identificar e reestruturar pensamentos disfuncionais que alimentam ciclos
+            dolorosos. Trabalha diretamente os padrões de ansiedade, o medo do abandono e as crenças que sabotam os seus
+            relacionamentos.</p>
+          <div class="skill-tags">
+            <span class="skill-pill">Reestruturação Cognitiva</span>
+            <span class="skill-pill">Quebra de Ciclos</span>
+            <span class="skill-pill">Redução da Ansiedade</span>
+            <span class="skill-pill">Medo do Abandono</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom quote -->
+      <div class="espec-quote reveal reveal-delay-3">
+        <div class="espec-quote-oval espec-quote-oval-a"></div>
+        <div class="espec-quote-oval espec-quote-oval-b"></div>
+        <p class="espec-quote-text">"Você não precisa apenas sobreviver às suas emoções — é possível aprender a vivê-las
+          com equilíbrio e segurança."</p>
+        <div class="espec-quote-badge">
+          <p class="espec-quote-badge-label">Padrão-ouro</p>
+          <p class="espec-quote-badge-val">DBT + TCC</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre-editorial">
+
+    <!-- Glows Animados -->
+    <div class="sobre-bg-glow glow-1"></div>
+    <div class="sobre-bg-glow glow-2"></div>
+    <div class="sobre-bg-glow glow-3"></div>
+
+    <div class="sobre-container">
+
+      <!-- Lado da Foto -->
+      <div class="sobre-image-wrap reveal">
+        <div class="anim-rotate-oval sobre-decor-oval"></div>
+        <img src="./sobre.webp" alt="Psicóloga Karol Moreno em atendimento de psicoterapia" width="1187" height="1080" loading="lazy" class="sobre-image">
+      </div>
+
+      <!-- Cartão de Vidro Flutuante -->
+      <div class="sobre-glass-card reveal reveal-delay-2">
+        <span class="tag tag--dark" style="margin-bottom:24px;">Conexão Humana</span>
+
+        <h2 class="sobre-title">Olá, eu sou Karol Moreno</h2>
+
+        <div class="sobre-text">
+          <p>Sou psicóloga clínica e também convivo com o Transtorno de Personalidade Borderline. Foi a partir da minha
+            própria história que nasceu o desejo de estudar profundamente o TPB e dedicar minha carreira a esse público.</p>
+          <p>Ao longo da minha caminhada, encontrei na Terapia Comportamental Dialética (DBT) uma abordagem baseada em
+            evidências, acolhedora e extremamente eficaz para o desenvolvimento da regulação emocional e de
+            relacionamentos mais saudáveis.</p>
+          <p>Aqui, você encontrará um espaço seguro, sem julgamentos, onde será visto além do diagnóstico, com amor,
+            respeito e sem julgamentos.</p>
+          <p>Você não precisa enfrentar tudo isso sozinho(a). Estou aqui para caminhar ao seu lado. Conte comigo nessa
+            jornada.</p>
+        </div>
+
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:32px;">Agendar uma sessão com a Karol</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona">
+    <div style="max-width:800px;margin:0 auto;text-align:center;margin-bottom:64px;">
+      <span class="tag"
+        style="background:rgba(255,255,255,0.05);color:var(--c-areia);border:1px solid rgba(255,255,255,0.1);margin-bottom:16px;">O
+        Processo</span>
+      <h2 class="reveal reveal-delay-1"
+        style="font-family:var(--f-display);font-style:normal;font-size:clamp(32px,4vw,48px);color:var(--c-creme);line-height:1.1;">
+        Um espaço seguro para começar no seu ritmo</h2>
+      <p class="reveal reveal-delay-2" style="font-size:16px;color:rgba(245,237,224,0.7);margin-top:16px;">Você não
+        precisa chegar sabendo o que dizer. A terapia é desenhada para remover a ansiedade antecipatória.</p>
+    </div>
+    <div class="pillar-list" style="max-width:800px;margin:0 auto;">
+      <div class="pillar-item anim-lift-box reveal" style="max-width:100%;">
+        <span class="pillar-num">01</span>
+        <div>
+          <h3 style="font-family:var(--f-titulo);font-size:18px;font-weight:700;margin-bottom:4px;">A Primeira Conversa
+          </h3>
+          <p style="margin:0;font-size:15px;color:rgba(59,26,10,0.8);">Um bate-papo sem pressão para entendermos o que
+            você está enfrentando e avaliarmos como eu posso te ajudar.</p>
+        </div>
+      </div>
+      <div class="pillar-item anim-lift-box reveal reveal-delay-1" style="max-width:100%;">
+        <span class="pillar-num">02</span>
+        <div>
+          <h3 style="font-family:var(--f-titulo);font-size:18px;font-weight:700;margin-bottom:4px;">Estruturação Segura
+          </h3>
+          <p style="margin:0;font-size:15px;color:rgba(59,26,10,0.8);">Estabelecemos juntos os seus limites e objetivos.
+            Você saberá exatamente como a terapia vai funcionar, sem surpresas.</p>
+        </div>
+      </div>
+      <div class="pillar-item anim-lift-box reveal reveal-delay-2" style="max-width:100%;">
+        <span class="pillar-num">03</span>
+        <div>
+          <h3 style="font-family:var(--f-titulo);font-size:18px;font-weight:700;margin-bottom:4px;">Ferramentas Práticas
+          </h3>
+          <p style="margin:0;font-size:15px;color:rgba(59,26,10,0.8);">Sessão a sessão, você desenvolve autoaceitação e aprende habilidades concretas de regulação emocional e tolerância ao mal-estar (DBT e TCC).</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="reveal reveal-delay-3">
+      <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-primary">Estou pronta(o) para começar</a>
+    </div>
+  </section>
+
+  <!-- DESENVOLVIMENTO -->
+  <section id="desenvolvimento">
+    <div class="dev-oval dev-oval-a"></div>
+    <div class="dev-oval dev-oval-b"></div>
+    <div class="dev-inner">
+
+      <!-- Heading -->
+      <div class="dev-head reveal">
+        <span class="tag tag--linho" style="margin-bottom:20px;display:inline-block;">O Futuro</span>
+        <h2 class="dev-h2">Com o tempo, você pode aprender a:</h2>
+        <div class="dev-bar">
+          <div class="dev-bar-fill"></div>
+        </div>
+        <p class="dev-sub">Resultados concretos e progressivos que fazem diferença real no seu dia a dia.</p>
+      </div>
+
+      <!-- Cards -->
+      <div class="dev-grid">
+
+        <div class="white-card reveal reveal-delay-1" style="border-top:3px solid #B84500;">
+          <span class="dev-num">01</span>
+          <div class="dev-dot-wrap" style="background:rgba(184,69,0,0.1);">
+            <div class="dev-dot" style="background:#B84500;"></div>
+          </div>
+          <p class="dev-card-title">Lidar melhor com as emoções</p>
+          <p class="dev-card-body">Reduzir a intensidade dos picos emocionais e responder com mais equilíbrio às
+            situações difíceis.</p>
+        </div>
+
+        <div class="white-card reveal reveal-delay-2" style="border-top:3px solid #B07848;">
+          <span class="dev-num">02</span>
+          <div class="dev-dot-wrap" style="background:rgba(176,120,72,0.12);">
+            <div class="dev-dot" style="background:#B07848;"></div>
+          </div>
+          <p class="dev-card-title">Reduzir a impulsividade</p>
+          <p class="dev-card-body">Agir com mais clareza e intenção antes que a explosão aconteça — criando um espaço
+            entre o gatilho e a reação.</p>
+        </div>
+
+        <div class="white-card reveal reveal-delay-3" style="border-top:3px solid #5C1F1A;">
+          <span class="dev-num">03</span>
+          <div class="dev-dot-wrap" style="background:rgba(92,31,26,0.1);">
+            <div class="dev-dot" style="background:#5C1F1A;"></div>
+          </div>
+          <p class="dev-card-title">Ter relações mais seguras</p>
+          <p class="dev-card-body">Diminuir o medo extremo do abandono e construir vínculos baseados em confiança e
+            presença real.</p>
+        </div>
+
+        <div class="white-card reveal reveal-delay-4" style="border-top:3px solid #DCC48A;">
+          <span class="dev-num">04</span>
+          <div class="dev-dot-wrap" style="background:rgba(220,196,138,0.2);">
+            <div class="dev-dot" style="background:#C4A44A;"></div>
+          </div>
+          <p class="dev-card-title">Sentir mais estabilidade</p>
+          <p class="dev-card-body">Resgatar o senso de identidade e construir uma base interna sólida que não depende da
+            aprovação dos outros.</p>
+        </div>
+
+        <div class="white-card reveal reveal-delay-4" style="border-top:3px solid #B07848;">
+          <span class="dev-num">05</span>
+          <div class="dev-dot-wrap" style="background:rgba(176,120,72,0.12);">
+            <div class="dev-dot" style="background:#B07848;"></div>
+          </div>
+          <p class="dev-card-title">Praticar a auto aceitação</p>
+          <p class="dev-card-body">Aprender a se relacionar com gentileza consigo mesmo — reconhecendo suas emoções sem se punir por senti-las.</p>
+        </div>
+
+      </div>
+
+      <!-- Stat strip -->
+      <div class="dev-stat-row reveal reveal-delay-3">
+        <div class="dev-stat">
+          <p class="dev-stat-val">DBT</p>
+          <p class="dev-stat-label">Abordagem principal</p>
+        </div>
+        <div class="dev-stat">
+          <p class="dev-stat-val">Presencial</p>
+          <p class="dev-stat-label">Método complementar</p>
+        </div>
+        <div class="dev-stat">
+          <p class="dev-stat-val">100%</p>
+          <p class="dev-stat-label">Sem julgamentos</p>
+        </div>
+        <div class="dev-stat">
+          <p class="dev-stat-val">Online</p>
+          <p class="dev-stat-label">Atendimento disponível</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;" class="reveal reveal-delay-4">
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-primary">Buscar estabilidade agora</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:64px;">
+        <span class="tag"
+          style="background:rgba(255,255,255,0.05);color:var(--c-areia);border:1px solid rgba(255,255,255,0.1);margin-bottom:16px;">Dúvidas
+          Frequentes</span>
+        <h2 class="reveal reveal-delay-1"
+          style="font-family:var(--f-display);font-style:normal;font-size:clamp(32px,4vw,48px);color:var(--c-creme);line-height:1.1;">
+          Perguntas que quase ninguém faz em voz alta</h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <details class="faq-item">
+          <summary class="faq-question">E se eu quiser desistir no meio do processo?</summary>
+          <div class="faq-answer">A vontade de fugir quando as coisas começam a se aprofundar é muito comum em casos de
+            TPB. Nós vamos combinar uma "regra de pausa" logo no início: se você quiser desistir, faremos apenas mais
+            uma sessão para conversarmos abertamente sobre isso. Sem pressões, apenas para garantir que não é um impulso
+            momentâneo de auto-sabotagem.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">E se eu me apegar demais à terapia (ou a você)?</summary>
+          <div class="faq-answer">O medo do abandono pode fazer com que a relação terapêutica pareça intensa no início.
+            A Terapia Dialética Comportamental foi desenhada especificamente para lidar com isso. Nossa relação terá
+            limites claros e saudáveis, e meu objetivo não é criar dependência, mas sim ensinar você a ser sua própria
+            âncora com o tempo.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Funciona mesmo para mim? Já tentei outras e não deu certo.</summary>
+          <div class="faq-answer">Muitas pessoas com características borderline passam anos em terapias convencionais
+            sentindo que estão apenas "enxugando gelo". A DBT é a abordagem padrão-ouro para desregulação emocional
+            severa. Não é apenas falar sobre os problemas, é aprender habilidades concretas (ferramentas práticas) para
+            lidar com a intensidade quando ela surgir.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Você poderá ser direcionado por mim?</summary>
+          <div class="faq-answer">Sim. Atendo pessoas que se identificam com o sofrimento emocional intenso — com ou sem diagnóstico formal. Se você chegou até aqui e algo ressoou em você, isso já é um bom sinal de que podemos trabalhar juntos. O primeiro passo é uma conversa simples, sem compromisso, para entendermos se faz sentido seguirmos em frente.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Você vai me dizer o que eu tenho que fazer?</summary>
+          <div class="faq-answer">Não do jeito que você talvez tema. Eu não estou aqui para te "consertar", te controlar ou te
+            julgar — você não é um problema a ser resolvido. Meu papel é te direcionar e te dar ferramentas: com a DBT,
+            vamos trabalhar a aceitação e a mudança, no seu ritmo. Quem conduz essa transformação é você; eu caminho ao
+            seu lado com acolhimento, respeito pelo seu processo, empatia e amor — te ajudando a enxergar, aos poucos,
+            que a sua vida vale a pena ser vivida.</div>
+        </details>
+      </div>
+      <div style="text-align:center;margin-top:48px;" class="reveal reveal-delay-3">
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-ghost">Ainda tenho dúvidas? Fale comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="anim-rotate-oval"
+      style="position:absolute;top:-20px;left:-20px;width:200px;height:100px;opacity:0.1;pointer-events:none;"></div>
+    <div class="anim-rotate-oval"
+      style="position:absolute;bottom:-20px;right:-20px;width:300px;height:150px;opacity:0.1;pointer-events:none;animation-direction:reverse;">
+    </div>
+    <div
+      style="position:relative;z-index:1;max-width:700px;margin:0 auto;display:flex;flex-direction:column;align-items:center;">
+      <h2 class="reveal"
+        style="font-family:var(--f-display);font-style:normal;font-weight:900;font-size:clamp(40px,6vw,64px);color:var(--c-creme);line-height:1.1;margin-bottom:24px;">
+        Pronta(o) para dar o primeiro passo?</h2>
+      <p class="reveal reveal-delay-1"
+        style="font-size:18px;color:rgba(245,237,224,0.7);line-height:1.6;margin-bottom:48px;">Se você sente que precisa
+        de ajuda… esse pode ser um bom começo. Sem pressão, no seu próprio tempo.</p>
+      <div class="reveal reveal-delay-2" style="position:relative;">
+        <div class="anim-pulse"
+          style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;z-index:0;">
+        </div>
+        <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="btn-primary"
+          style="position:relative;z-index:1;padding:20px 48px;font-size:16px;">Agendar uma conversa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" style="position:relative;padding:96px 24px;background:var(--c-escuro);">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <span class="tag"
+          style="background:rgba(255,255,255,0.05);color:var(--c-areia);border:1px solid rgba(255,255,255,0.1);">Onde me
+          encontrar</span>
+        <h2 class="reveal"
+          style="font-family:var(--f-display);font-style:normal;font-size:clamp(32px,4vw,48px);color:var(--c-creme);line-height:1.1;margin-top:16px;">
+          Atendimento presencial em Natal/RN</h2>
+        <p class="reveal reveal-delay-1"
+          style="font-size:16px;color:rgba(245,237,224,0.75);margin-top:16px;line-height:1.6;">
+          <strong style="color:var(--c-areia);">Instituto Pensare</strong><br>
+          Rua Pastor Jerônimo Gueiros, 677 — Tirol, Natal/RN
+        </p>
+      </div>
+      <div class="reveal reveal-delay-2"
+        style="display:flex;justify-content:center;gap:8px;margin-bottom:20px;">
+        <button type="button" id="map-btn-mapa" onclick="setMapMode('mapa')"
+          style="cursor:pointer;font-family:var(--f-corpo);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:10px 22px;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.12);background:var(--c-terracota);color:#fff;transition:all 0.25s ease;">Mapa</button>
+        <button type="button" id="map-btn-street" onclick="setMapMode('street')"
+          style="cursor:pointer;font-family:var(--f-corpo);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:10px 22px;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);transition:all 0.25s ease;">Street View</button>
+      </div>
+      <div class="reveal reveal-delay-2"
+        style="position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 24px 60px rgba(0,0,0,0.4);">
+        <iframe id="map-frame"
+          src="https://maps.google.com/maps?q=Instituto%20Pensare%2C%20Rua%20Pastor%20Jer%C3%B4nimo%20Gueiros%2C%20677%2C%20Tirol%2C%20Natal%20-%20RN&t=m&z=17&output=embed"
+          width="100%" height="460" style="border:0;display:block;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Mapa — Instituto Pensare, Natal/RN"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var frame = document.getElementById('map-frame');
+        var btnMapa = document.getElementById('map-btn-mapa');
+        var btnStreet = document.getElementById('map-btn-street');
+        var srcMapa = 'https://maps.google.com/maps?q=Instituto%20Pensare%2C%20Rua%20Pastor%20Jer%C3%B4nimo%20Gueiros%2C%20677%2C%20Tirol%2C%20Natal%20-%20RN&t=m&z=17&output=embed';
+        var srcStreet = 'https://maps.google.com/maps?q=&layer=c&cbll=-5.802581258089794,-35.20403355663009&cbp=12,0,0,0,0&output=svembed';
+        var on = { background: 'var(--c-terracota)', color: '#fff' };
+        var off = { background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.6)' };
+        function paint(btn, s) { btn.style.background = s.background; btn.style.color = s.color; }
+        window.setMapMode = function (mode) {
+          if (mode === 'street') {
+            frame.src = srcStreet; paint(btnStreet, on); paint(btnMapa, off);
+          } else {
+            frame.src = srcMapa; paint(btnMapa, on); paint(btnStreet, off);
+          }
+        };
+      })();
+    </script>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <!-- Col 1 — Brand -->
+        <div>
+          <p class="footer-brand-name">Psicóloga<br>Karol</p>
+          <p class="footer-brand-desc">Terapia especializada em Transtorno de Personalidade Borderline. Atendimento online, humanizado e sem julgamentos.</p>
+          <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="footer-cta-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar sessão
+          </a>
+        </div>
+
+        <!-- Col 2 — Navegação -->
+        <div>
+          <p class="footer-col-label">Navegação</p>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#identificacao">Identificação</a></li>
+            <li><a href="#validacao">Você não é "demais"</a></li>
+            <li><a href="#especializacao">Especialização</a></li>
+            <li><a href="#sobre">Sobre a Karol</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#desenvolvimento">O Futuro</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 — Redes Sociais -->
+        <div>
+          <p class="footer-col-label">Redes Sociais</p>
+          <div class="footer-social-grid">
+
+            <a href="https://www.instagram.com/terapeuta.karol_/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <div class="footer-social-icon" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="#fff" stroke="none"/>
+                </svg>
+              </div>
+              <div>
+                <p class="footer-social-info-name">Instagram</p>
+                <p class="footer-social-info-handle">@terapeuta.karol_</p>
+              </div>
+            </a>
+
+            <a href="https://api.whatsapp.com/message/4UQKWLNAD6BOI1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <div class="footer-social-icon" style="background:#25D366;">
+                <svg viewBox="0 0 24 24" fill="#fff">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="footer-social-info-name">WhatsApp</p>
+                <p class="footer-social-info-handle">Agendar conversa</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Psicóloga Karol · Todos os direitos reservados · CRP em conformidade com o CFP</p>
+      <a href="https://www.maranatamarketing.com" target="_blank" rel="noopener noreferrer" class="footer-maranata">
+        <img src="./maranata.webp" alt="Logo Maranata" width="252" height="236" loading="lazy" class="footer-maranata-logo">
+        <span class="footer-maranata-text">Desenvolvido por Maranata</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+
+</html>

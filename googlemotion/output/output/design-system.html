@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Flow — Design System</title>
+  <link crossorigin="anonymous" href="https://fonts.googleapis.com/" rel="preconnect"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Google+Symbols|Google+Sans+Text:400&display=swap&lang=en" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="../assets/css_5b1703964a40.css"/>
+  <link rel="stylesheet" href="../assets/a49a5fd73c61298b_32d67b66d228.css"/>
+  <link rel="stylesheet" href="../assets/293292df66b592ee_801eb421895a.css"/>
+  <link rel="stylesheet" href="../assets/1471f144a2a3b0fe_3613b50debf1.css"/>
+  <style>
+    /* DS Nav */
+    .ds-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.8rem 2.4rem;
+      background: rgba(18, 18, 18, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid hsla(0,0%,100%,.1);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.3rem;
+      flex-wrap: wrap;
+    }
+    .ds-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .ds-nav a:hover {
+      background: hsla(0,0%,100%,.1);
+      color: #fff;
+    }
+    .ds-nav .ds-logo {
+      font-weight: 500;
+      color: #fff;
+      margin-right: 1.6rem;
+      font-size: 1.4rem;
+    }
+
+    /* DS Section wrapper */
+    .ds-section {
+      padding: 12rem 2.4rem 8rem;
+      max-width: 129.6rem;
+      margin: 0 auto;
+    }
+    .ds-section-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid hsla(0,0%,100%,.1);
+    }
+
+    /* Typo rows */
+    .typo-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 2.4rem 0;
+      border-bottom: 1px solid hsla(0,0%,100%,.07);
+      gap: 2.4rem;
+    }
+    .typo-row:last-child { border-bottom: none; }
+    .typo-label {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.4);
+      min-width: 14rem;
+      flex-shrink: 0;
+    }
+    .typo-preview { flex: 1; overflow: hidden; }
+    .typo-spec {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.35);
+      min-width: 12rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* Color swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 4rem;
+    }
+    .color-swatch {
+      border-radius: 1.2rem;
+      overflow: hidden;
+      border: 1px solid hsla(0,0%,100%,.08);
+    }
+    .color-swatch-block {
+      height: 9.6rem;
+      width: 100%;
+    }
+    .color-swatch-info {
+      padding: 1.2rem 1.6rem;
+      background: rgba(255,255,255,0.03);
+    }
+    .color-swatch-name {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .color-swatch-value {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .color-group-label {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.5);
+      margin: 3.2rem 0 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Component rows */
+    .component-group {
+      margin-bottom: 6.4rem;
+    }
+    .component-group-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 2.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .component-row {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      padding: 3.2rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid hsla(0,0%,100%,.06);
+      border-radius: 1.6rem;
+    }
+    .component-state-label {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      display: block;
+      margin-top: 0.8rem;
+    }
+    .component-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Spacing tokens */
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid hsla(0,0%,100%,.06);
+    }
+    .spacing-bar {
+      background: #185ccc;
+      height: 1.6rem;
+      border-radius: 0.4rem;
+    }
+    .spacing-label {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.5);
+      min-width: 8rem;
+    }
+    .spacing-value {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* Motion gallery */
+    .motion-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+      gap: 2.4rem;
+    }
+    .motion-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid hsla(0,0%,100%,.08);
+      border-radius: 1.6rem;
+      padding: 3.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .motion-card-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+    .motion-card-spec {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 1.6;
+    }
+    .motion-demo-box {
+      width: 6.4rem;
+      height: 6.4rem;
+      border-radius: 1.2rem;
+      background: linear-gradient(135deg, #185ccc, #94b1c9);
+    }
+    .motion-fade-in { animation: hero_hero-fade-in__wxY4i 0.5s linear 0s both; }
+    .motion-bounce { animation: hero_bounce__9P_je 1.5s ease-in-out infinite; }
+    .motion-blur-reveal { animation: hero_hero-image-reveal__AmBQh 1.5s ease-out both; }
+    .motion-float1 {
+      animation: blobs_float1__PSlDJ 20s ease-in-out infinite;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #cbae92 0, rgba(203,174,146,.6) 25%, rgba(203,174,146,.1) 55%, transparent 70%);
+    }
+    .motion-float2 {
+      animation: blobs_float2__dvlUV 25s ease-in-out infinite;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #94b1c9 0, rgba(148,177,201,.6) 25%, rgba(148,177,201,.1) 55%, transparent 70%);
+    }
+
+    /* Layout demo */
+    .layout-demo {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid hsla(0,0%,100%,.06);
+      border-radius: 1.6rem;
+      padding: 3.2rem;
+      margin-bottom: 2.4rem;
+    }
+    .layout-demo-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 0.8rem;
+    }
+    .layout-demo-col {
+      background: rgba(24, 92, 204, 0.2);
+      border: 1px solid rgba(24, 92, 204, 0.4);
+      border-radius: 0.4rem;
+      height: 4rem;
+    }
+    .layout-demo-label {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.6rem;
+    }
+    .radius-demo-row {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      padding: 2.4rem 0;
+      border-bottom: 1px solid hsla(0,0%,100%,.06);
+    }
+    .radius-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid hsla(0,0%,100%,.15);
+      width: 6.4rem;
+      height: 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .radius-label {
+      font-family: 'Google Sans Text', sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+
+<!-- DS Navigation -->
+<nav class="ds-nav">
+  <span class="ds-logo">Flow DS</span>
+  <a href="#hero">Hero</a>
+  <a href="#typography">Typography</a>
+  <a href="#colors">Colors</a>
+  <a href="#components">Components</a>
+  <a href="#layout">Layout</a>
+  <a href="#motion">Motion</a>
+</nav>
+
+<!-- SECTION 0: HERO CLONE -->
+<section class="hero_hero__KReoF" id="hero"><div class="blobs_blobs__lZnW9 blobs_show__yQvFD" style="--scale: 28.799999999999997; --window-width: 1920px; --window-height: 1080px;"></div><div class="grid_gridContainer__y7Rdy" style="transform: translateY(-23.3203px); mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.03) 9%, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.25) 65%, rgba(0, 0, 0, 0) 100%);"><div class="grid_grid__hMS_3" style="--gap:16px;grid-template-rows:repeat(4, auto)"><div class="grid_gridRow__pvF1e" data-width="7.895833333333333" style="height: 215.557px;"><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.3785008495717095s; --z: translateZ(-29.72399836188441px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/portrait_9ab3f5631d30.webp"/><video loop="" playsinline="" poster="assets/portrait_9ab3f5631d30.webp" preload="none"><source src="assets/portrait_47790790b858.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.6619492044731574s; --z: translateZ(-22.639624636024006px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/square_b98dd20a9837.webp"/><video loop="" playsinline="" poster="assets/square_b98dd20a9837.webp" preload="none"><source src="assets/square_47d342cc2746.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.29780842496805343s; --z: translateZ(-24.958965487182248px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_e871a40e181b.jpg" srcset="assets/image_a681cd55c978.jpg 384w, assets/image_803a8b99250c.jpg 640w, assets/image_6f3977b20d3a.jpg 750w, assets/image_4ebdc96bbed4.jpg 828w, assets/image_79df7451fc89 1080w, assets/image_da99889fb803.jpg 1200w, assets/image_c9dfb1222515.jpg 1920w, assets/image_c2627bb3a851.jpg 2048w, assets/image_e871a40e181b.jpg 3840w" style="color: transparent;" width="500"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.45580990075212147s; --z: translateZ(-21.894841476052687px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/landscape_2dabe1048c77.webp"/><video loop="" playsinline="" poster="assets/landscape_2dabe1048c77.webp" preload="none"><source src="assets/landscape_d21ae6a9333a.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.7026967796208208s; --z: translateZ(-26.021282224353882px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/landscape_4b6b93a1a4cc.webp"/><video loop="" playsinline="" poster="assets/landscape_4b6b93a1a4cc.webp" preload="none"><source src="assets/landscape_1e821536a97a.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.44863121922497595s; --z: translateZ(-32.76001853439546px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/landscape_86cf2936d896.webp"/><video loop="" playsinline="" poster="assets/landscape_86cf2936d896.webp" preload="none"><source src="assets/landscape_9bfd6223cbab.mp4" type="video/mp4"/></video></div></div></div><div class="grid_gridRow__pvF1e" data-width="6.680555555555555" style="height: 254.769px;"><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.4591643502905996s; --z: translateZ(-25.857140261572233px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/square_c614f57476b4.webp"/><video loop="" playsinline="" poster="assets/square_c614f57476b4.webp" preload="none"><source src="assets/square_8fe6f3725a65.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.7111347068298869s; --z: translateZ(-32.906125812243864px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_f4072c5ef631.jpg" srcset="assets/image_5b0f3b755b3f.jpg 384w, assets/image_9d6330e024f6.jpg 640w, assets/image_8afd096edf58.jpg 750w, assets/image_3b379cbfa9eb.jpg 828w, assets/image_d77e15977eab 1080w, assets/image_50234cd9bc4d.jpg 1200w, assets/image_733fa0364d1c.jpg 1920w, assets/image_57ef16f4a7c9.jpg 2048w, assets/image_f4072c5ef631.jpg 3840w" style="color: transparent;" width="279"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.6614272270621835s; --z: translateZ(-37.50779014974739px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_912f6e50bfa2.jpg" srcset="assets/image_f1a79128392f.jpg 384w, assets/image_1920dec27983.jpg 640w, assets/image_422d130b6570.jpg 750w, assets/image_fa21f9de0eb5.jpg 828w, assets/image_9d0b62bcaf84 1080w, assets/image_f005b4289357.jpg 1200w, assets/image_23e371ff9631.jpg 1920w, assets/image_ad061e4980aa.jpg 2048w, assets/image_912f6e50bfa2.jpg 3840w" style="color: transparent;" width="890"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.3779545959975418s; --z: translateZ(-25.41205539320995px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_821a5fc72e0c.jpg" srcset="assets/image_090e449637c9.jpg 384w, assets/image_14f887f21d02.jpg 640w, assets/image_0648f776f693.jpg 750w, assets/image_c15806a72a8a.jpg 828w, assets/image_ca761dacfd2c 1080w, assets/image_7cfe8b8ab25f.jpg 1200w, assets/image_470992c7feb8.jpg 1920w, assets/image_cf34d394c28a.jpg 2048w, assets/image_821a5fc72e0c.jpg 3840w" style="color: transparent;" width="890"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.5274035503169778s; --z: translateZ(-36.375421978997764px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_516578537045.jpg" srcset="assets/image_e03cb91ac36d.jpg 384w, assets/image_bffbf5221a0c.jpg 640w, assets/image_877940f4f534.jpg 750w, assets/image_fa665fea9f50.jpg 828w, assets/image_239d35617eab 1080w, assets/image_645ab977a7bb.jpg 1200w, assets/image_8fc40ce41ad9.jpg 1920w, assets/image_55a55b4ea962.jpg 2048w, assets/image_516578537045.jpg 3840w" style="color: transparent;" width="279"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.3676999496878416s; --z: translateZ(-39.3993926232244px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_edbd3d991a5a.jpg" srcset="assets/image_56d994173389.jpg 384w, assets/image_43f518fe1d42.jpg 640w, assets/image_8a403efbb443.jpg 750w, assets/image_a292dc6c24bf.jpg 828w, assets/image_aa31daceb50c 1080w, assets/image_36289bb1d9ad.jpg 1200w, assets/image_dc5dd40321da.jpg 1920w, assets/image_754e3a582ced.jpg 2048w, assets/image_edbd3d991a5a.jpg 3840w" style="color: transparent;" width="500"/></div></div><div class="grid_gridRow__pvF1e" data-width="6.680555555555555" style="height: 254.769px;"><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.35721478872006057s; --z: translateZ(-27.646307651500894px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/portrait_19874ec088a1.webp"/><video loop="" playsinline="" poster="assets/portrait_19874ec088a1.webp" preload="none"><source src="assets/portrait_d8084b126855.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.9342337258130127s; --z: translateZ(-30.13612279597092px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/square_d032ee40366b.webp"/><video loop="" playsinline="" poster="assets/square_d032ee40366b.webp" preload="none"><source src="assets/square_d509f208bad6.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.9525735671802898s; --z: translateZ(-29.448788624937542px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/portrait_cad5f16e8523.webp"/><video loop="" playsinline="" poster="assets/portrait_cad5f16e8523.webp" preload="none"><source src="assets/portrait_8231720081e6.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.9769696981353787s; --z: translateZ(-31.322777422479472px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/landscape_029090c32857.webp"/><video loop="" playsinline="" poster="assets/landscape_029090c32857.webp" preload="none"><source src="assets/landscape_1804168ada8b.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1 / 1; --delay: 0.7452271363348537s; --z: translateZ(-31.172549043759552px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/square_8b854ef20a6c.webp"/><video loop="" playsinline="" poster="assets/square_8b854ef20a6c.webp" preload="none"><source src="assets/square_ca3ce932a910.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.28254415178592873s; --z: translateZ(-37.61633490577935px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/landscape_41e5e23f62f6.webp"/><video loop="" playsinline="" poster="assets/landscape_41e5e23f62f6.webp" preload="none"><source src="assets/landscape_0020921e13d0.mp4" type="video/mp4"/></video></div></div></div><div class="grid_gridRow__pvF1e" data-width="8.145833333333332" style="height: 205.013px;"><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.48820434551888914s; --z: translateZ(-24.5761527453585px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_6b6a8aab1a06.jpg" srcset="assets/image_493e42d07752.jpg 384w, assets/image_a9777e5e5359.jpg 640w, assets/image_667c5786cba5.jpg 750w, assets/image_3eaa6b2e446b.jpg 828w, assets/image_c609c1319696 1080w, assets/image_b00f69c7373b.jpg 1200w, assets/image_8c2362081156.jpg 1920w, assets/image_e8c515d49422.jpg 2048w, assets/image_6b6a8aab1a06.jpg 3840w" style="color: transparent;" width="890"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.35070070243293405s; --z: translateZ(-30.66450397834887px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/portrait_54e95f1eee77.webp"/><video loop="" playsinline="" poster="assets/portrait_54e95f1eee77.webp" preload="none"><source src="assets/portrait_b52c4994a1fe.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.8589959497338984s; --z: translateZ(-37.51839316813691px);"><div class="grid_videoWrapper__hFKcb"><img alt="" aria-hidden="true" fetchpriority="high" src="assets/portrait_4eee604fb185.webp"/><video loop="" playsinline="" poster="assets/portrait_4eee604fb185.webp" preload="none"><source src="assets/portrait_f4210dfad67d.mp4" type="video/mp4"/></video></div></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.5363972520376191s; --z: translateZ(-30.914337196402517px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_e76bc9062a83.jpg" srcset="assets/image_b25e7c901a39.jpg 384w, assets/image_413e01cc33fe.jpg 640w, assets/image_5e13026b9a75.jpg 750w, assets/image_60d215cb32f9.jpg 828w, assets/image_05253dfe374c 1080w, assets/image_70aa8247f436.jpg 1200w, assets/image_d1c7f8338319.jpg 1920w, assets/image_e450c907031b.jpg 2048w, assets/image_e76bc9062a83.jpg 3840w" style="color: transparent;" width="279"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.9582151586976471s; --z: translateZ(-36.21707588251901px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_9991ea7649fa.jpg" srcset="assets/image_f31772fb20a9.jpg 384w, assets/image_db868dc15366.jpg 640w, assets/image_1faa5a661700.jpg 750w, assets/image_968afea2d4ee.jpg 828w, assets/image_6b8fa0af1cc1 1080w, assets/image_39cbdf11a058.jpg 1200w, assets/image_3fb4c5f260f8.jpg 1920w, assets/image_01e17e73d698.jpg 2048w, assets/image_9991ea7649fa.jpg 3840w" style="color: transparent;" width="890"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.5614283626269381s; --z: translateZ(-22.84351272583446px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_b7aea1511775.jpg" srcset="assets/image_f62cc018b89a.jpg 384w, assets/image_a1450b11af9e.jpg 640w, assets/image_08ef3322a9a8.jpg 750w, assets/image_8b2522bedd5a.jpg 828w, assets/image_e088ee8e3d44 1080w, assets/image_79e0a5ea91fb.jpg 1200w, assets/image_07b82de542b7.jpg 1920w, assets/image_6c680365b3b0.jpg 2048w, assets/image_b7aea1511775.jpg 3840w" style="color: transparent;" width="279"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 0.5625 / 1; --delay: 0.3622216052845109s; --z: translateZ(-32.64804754226415px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_3f72855c8f4b.jpg" srcset="assets/image_640fe85f5002.jpg 384w, assets/image_7ae199709c46.jpg 640w, assets/image_8154e460e130.jpg 750w, assets/image_cd5394fc8b35.jpg 828w, assets/image_14d549ad5f4d 1080w, assets/image_b0761bd4b0c8.jpg 1200w, assets/image_89f312eb4e5e.jpg 1920w, assets/image_d77b5a54931f.jpg 2048w, assets/image_3f72855c8f4b.jpg 3840w" style="color: transparent;" width="279"/></div><div class="grid_gridItem__EE_Vk grid_show__WEXbD" style="aspect-ratio: 1.77778 / 1; --delay: 0.924782190990694s; --z: translateZ(-30.865444903777576px);"><img alt="Gallery item" class="grid_image__df_Cm" data-nimg="1" decoding="async" fetchpriority="high" height="500" loading="eager" sizes="50vw" src="assets/image_86af66c60af8.jpg" srcset="assets/image_7cb168e4ee56.jpg 384w, assets/image_a0394c7d146c.jpg 640w, assets/image_6fc61456eb76.jpg 750w, assets/image_2074f66417b1.jpg 828w, assets/image_0c2066a95891 1080w, assets/image_bf8765df48a2.jpg 1200w, assets/image_f0b300b898c6.jpg 1920w, assets/image_5d81541f46f5.jpg 2048w, assets/image_86af66c60af8.jpg 3840w" style="color: transparent;" width="890"/></div></div></div></div><div class="hero_heroContent__pLUPb"><h1 class="hero_flowEffect__P9DNQ hero_animationDone__3uLe_"><span class="hero_srOnly__PXN_D">Flow</span><div aria-hidden="true" class="js-flowContainer hero_flowContainer__7pYgC"><img alt="" class="hero_flowEffectImg__52bw6" src="assets/wordmark_4f2f5ccbb7b2.svg"/><canvas data-engine="three.js r176" height="364" style="display: block; position: relative; width: 714px; height: 364px; max-width: 100%; max-height: 100%;" width="714"></canvas></div></h1><div class="hero_descriptionAndCta__KnYBV"><p class="hero_description__iioq6 hero_fadeIn__Hptea">Google Flow — Design System Reference</p><a class="button-link_link__eTf8F hero_cta__MZ0pM hero_fadeIn__Hptea" href="https://labs.google/fx/flow?sia=true" rel="noreferrer" target="_blank"><span>Explore Components</span></a><p class="hero_disclaimer__PSc_S hero_fadeIn__Hptea"><span>Explore<!-- --> <a href="https://one.google.com/ai?utm_source=flow&amp;utm_medium=web&amp;utm_campaign=vfx_landing_page_offer" target="_blank">Google AI Subscriptions.</a></span> <span>See<!-- --> <a href="https://labs.google/fx/tools/flow/faq" rel="noreferrer" target="_blank">FAQ</a>.</span></p></div><div class="hero_scrollIndicator__MukNI hero_show__EZLZa"><span>Scroll to Explore</span></div></div></section>
+
+<!-- SECTION 1: TYPOGRAPHY -->
+<div id="typography" style="background:#000;">
+  <div class="ds-section">
+    <div class="ds-section-title">01 — Typography</div>
+
+    <div class="typo-row">
+      <span class="typo-label">Megatitle</span>
+      <div class="typo-preview"><span class="typo-flow-megatitle">Flow</span></div>
+      <span class="typo-spec">9.6 → 16.8rem / 100%</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Title</span>
+      <div class="typo-preview"><span class="typo-flow-title">Create with Flow</span></div>
+      <span class="typo-spec">4.8 → 12rem / 100%</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Subtitle</span>
+      <div class="typo-preview"><span class="typo-flow-subtitle">AI video generation</span></div>
+      <span class="typo-spec">4.8rem / 6rem</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Tagline</span>
+      <div class="typo-preview"><span class="typo-flow-tagline">Where storytelling happens</span></div>
+      <span class="typo-spec">3.2rem / 4.1rem</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Banner</span>
+      <div class="typo-preview"><span class="typo-flow-banner">Explore capabilities and pricing plans</span></div>
+      <span class="typo-spec">1.4 → 2.8rem / 130%</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Caption</span>
+      <div class="typo-preview"><span class="typo-flow-caption">Section label / Category tag</span></div>
+      <span class="typo-spec">uppercase / tracking</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Text</span>
+      <div class="typo-preview"><span class="typo-flow-text">Body text for descriptions and paragraphs</span></div>
+      <span class="typo-spec">1.8 → 2.1rem / 2.7rem</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Text Small</span>
+      <div class="typo-preview"><span class="typo-flow-text-small">Secondary body text, captions, disclaimers</span></div>
+      <span class="typo-spec">1.6 → 2.1rem / 2.7rem</span>
+    </div>
+    <div class="typo-row">
+      <span class="typo-label">Body Small</span>
+      <div class="typo-preview"><span class="typo-material-body-small">Legal text, metadata, footnotes — Google Sans Text</span></div>
+      <span class="typo-spec">1.2rem / Google Sans Text</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: COLORS -->
+<div id="colors" style="background:#000;">
+  <div class="ds-section">
+    <div class="ds-section-title">02 — Colors &amp; Surfaces</div>
+
+    <div class="color-group-label">Backgrounds</div>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#000;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Page Background</div>
+          <div class="color-swatch-value">#000000</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:rgba(18,18,18,0.5); backdrop-filter:blur(40px);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Glass Surface</div>
+          <div class="color-swatch-value">rgba(18,18,18,.5) + blur(40px)</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:hsla(0,0%,100%,.05);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Surface 5%</div>
+          <div class="color-swatch-value">hsla(0,0%,100%,.05)</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:hsla(0,0%,100%,.15);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Surface 15%</div>
+          <div class="color-swatch-value">hsla(0,0%,100%,.15)</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:hsla(0,0%,100%,.25);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Surface 25%</div>
+          <div class="color-swatch-value">hsla(0,0%,100%,.25)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group-label">Text &amp; Icons</div>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#fff;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Primary Text</div>
+          <div class="color-swatch-value">#ffffff</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#bdc1c6;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Muted Text</div>
+          <div class="color-swatch-value">#bdc1c6</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#000; border: 2px solid #fff;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Dark Text (on white)</div>
+          <div class="color-swatch-value">#000000</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group-label">Accent &amp; Interactive</div>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:#185ccc;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Accent Blue</div>
+          <div class="color-swatch-value">#185ccc</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:hsla(0,0%,100%,.1);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Border / Divider</div>
+          <div class="color-swatch-value">hsla(0,0%,100%,.1)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group-label">Blob / Gradient Colors</div>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:radial-gradient(circle, #cbae92 0, rgba(203,174,146,.6) 25%, rgba(203,174,146,.1) 55%, transparent 70%);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Blob Warm</div>
+          <div class="color-swatch-value">#cbae92 (radial)</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:radial-gradient(circle, #94b1c9 0, rgba(148,177,201,.6) 25%, rgba(148,177,201,.1) 55%, transparent 70%);"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Blob Cool</div>
+          <div class="color-swatch-value">#94b1c9 (radial)</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:linear-gradient(180deg,rgb(255,255,255) 27.4%,rgba(255,255,255,0));"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Hero Fade (white)</div>
+          <div class="color-swatch-value">linear-gradient white→transparent</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-block" style="background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.9) 80%,rgb(0,0,0));"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Section Fade (dark)</div>
+          <div class="color-swatch-value">linear-gradient transparent→#000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: COMPONENTS -->
+<div id="components" style="background:#000;">
+  <div class="ds-section">
+    <div class="ds-section-title">03 — UI Components</div>
+
+    <div class="component-group">
+      <div class="component-group-title">Buttons</div>
+      <div class="component-row">
+        <div class="component-state">
+          <a class="button-link_link__eTf8F hero_cta__MZ0pM" href="#" onclick="return false;"><span>Create with Flow</span></a>
+          <span class="component-state-label">Hero CTA (default)</span>
+        </div>
+        <div class="component-state">
+          <a class="button-link_link__eTf8F" href="#" onclick="return false;"><span>Get started</span></a>
+          <span class="component-state-label">Ghost Button</span>
+        </div>
+        <div class="component-state" style="opacity:0.4; pointer-events:none;">
+          <a class="button-link_link__eTf8F" href="#"><span>Disabled</span></a>
+          <span class="component-state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <div class="component-group-title">Header Bar</div>
+      <div class="component-row" style="padding:0; overflow:hidden; background:transparent; border:none;">
+        <header class="header_container__X86zB" style="position:relative; width:100%;">
+          <a aria-label="Google Flow" class="header_logo__LKI4R" href="#" onclick="return false;">
+            <img alt="Google Flow" class="header_wordmark__7K_9C" src="../assets/wordmark_4f2f5ccbb7b2.svg"/>
+          </a>
+          <nav class="header_nav__8ABFM" aria-label="Navigation">
+            <a class="header_navLink__pqHpJ" href="#typography" onclick="return false;">Typography</a>
+            <a class="header_navLink__pqHpJ" href="#colors" onclick="return false;">Colors</a>
+            <a class="header_navLink__pqHpJ" href="#components" onclick="return false;">Components</a>
+          </nav>
+          <button aria-label="Menu" class="header_triggerButton__2Ei4o">
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+          </button>
+        </header>
+      </div>
+    </div>
+
+    <div class="component-group">
+      <div class="component-group-title">Dropdown (Glass)</div>
+      <div class="component-row" style="justify-content:flex-start;">
+        <div class="button-more-dropdown_dropdownContainer__s0SG9" style="position:relative; min-width:24rem;">
+          <a class="button-more-dropdown_dropdownLink__AHVUX" href="#" onclick="return false;">Overview</a>
+          <a class="button-more-dropdown_dropdownLink__AHVUX" href="#" onclick="return false;">Capabilities</a>
+          <a class="button-more-dropdown_dropdownLink__AHVUX" href="#" onclick="return false;">Gallery</a>
+          <a class="button-more-dropdown_dropdownLink__AHVUX" href="#" onclick="return false;">Pricing</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 4: LAYOUT -->
+<div id="layout" style="background:#000;">
+  <div class="ds-section">
+    <div class="ds-section-title">04 — Layout &amp; Spacing</div>
+
+    <div class="layout-demo">
+      <div class="layout-demo-label">12-column grid — max-width 129.6rem — gutter 20–32px</div>
+      <div class="layout-demo-grid">
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+        <div class="layout-demo-col"></div>
+      </div>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">4px</span>
+      <div class="spacing-bar" style="width:4px;"></div>
+      <span class="spacing-value">0.4rem — micro gap</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">8px</span>
+      <div class="spacing-bar" style="width:8px;"></div>
+      <span class="spacing-value">0.8rem — xs gap</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">16px</span>
+      <div class="spacing-bar" style="width:16px;"></div>
+      <span class="spacing-value">1.6rem — grid gap mobile</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">20px</span>
+      <div class="spacing-bar" style="width:20px;"></div>
+      <span class="spacing-value">2rem — gutter outer mobile</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">24px</span>
+      <div class="spacing-bar" style="width:24px;"></div>
+      <span class="spacing-value">2.4rem — section horizontal padding</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">32px</span>
+      <div class="spacing-bar" style="width:32px;"></div>
+      <span class="spacing-value">3.2rem — gutter outer desktop</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">48px</span>
+      <div class="spacing-bar" style="width:48px;"></div>
+      <span class="spacing-value">4.8rem — section spacing</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">80px</span>
+      <div class="spacing-bar" style="width:80px;"></div>
+      <span class="spacing-value">8rem — section padding vertical</span>
+    </div>
+    <div class="spacing-row">
+      <span class="spacing-label">120px</span>
+      <div class="spacing-bar" style="width:120px;"></div>
+      <span class="spacing-value">12rem — hero content margin</span>
+    </div>
+
+    <div style="margin-top:4rem;">
+      <div class="component-group-title">Border Radius Scale</div>
+      <div class="radius-demo-row">
+        <div class="radius-box" style="border-radius:0.4rem;">
+          <span class="radius-label">0.4rem</span>
+          <span class="radius-label">xs</span>
+        </div>
+        <div class="radius-box" style="border-radius:0.6rem;">
+          <span class="radius-label">0.6rem</span>
+          <span class="radius-label">sm</span>
+        </div>
+        <div class="radius-box" style="border-radius:1.2rem;">
+          <span class="radius-label">1.2rem</span>
+          <span class="radius-label">md</span>
+        </div>
+        <div class="radius-box" style="border-radius:1.6rem;">
+          <span class="radius-label">1.6rem</span>
+          <span class="radius-label">lg</span>
+        </div>
+        <div class="radius-box" style="border-radius:2.4rem;">
+          <span class="radius-label">2.4rem</span>
+          <span class="radius-label">xl</span>
+        </div>
+        <div class="radius-box" style="border-radius:3rem;">
+          <span class="radius-label">3rem</span>
+          <span class="radius-label">btn CTA</span>
+        </div>
+        <div class="radius-box" style="border-radius:50%;">
+          <span class="radius-label">50%</span>
+          <span class="radius-label">circle</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem;">
+      <div class="component-group-title">Breakpoints</div>
+      <div class="spacing-row">
+        <span class="spacing-label">xs</span>
+        <span class="spacing-value">0px — mobile base</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">sm</span>
+        <span class="spacing-value">768px — tablet</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">md</span>
+        <span class="spacing-value">1024px — small laptop</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">lg</span>
+        <span class="spacing-value">1280px — laptop</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">xl</span>
+        <span class="spacing-value">1440px — desktop</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">2xl</span>
+        <span class="spacing-value">1920px — wide monitor</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: MOTION -->
+<div id="motion" style="background:#000; padding-bottom:12rem;">
+  <div class="ds-section">
+    <div class="ds-section-title">05 — Motion &amp; Interaction</div>
+
+    <div class="motion-gallery">
+      <div class="motion-card">
+        <div class="motion-demo-box motion-fade-in" style="animation-iteration-count:infinite; animation-duration:2s;"></div>
+        <div class="motion-card-title">Hero Fade In</div>
+        <div class="motion-card-spec">hero_hero-fade-in<br/>opacity: 0 → 1<br/>0.5s linear, 1s delay</div>
+      </div>
+      <div class="motion-card">
+        <div class="motion-demo-box motion-blur-reveal" style="animation-iteration-count:infinite; animation-duration:2.5s;"></div>
+        <div class="motion-card-title">Image Reveal</div>
+        <div class="motion-card-spec">hero_hero-image-reveal<br/>opacity 0 + blur(100px) → clear<br/>ease-out</div>
+      </div>
+      <div class="motion-card">
+        <div class="motion-demo-box motion-bounce"></div>
+        <div class="motion-card-title">Bounce</div>
+        <div class="motion-card-spec">hero_bounce<br/>translateX(-50%) translateY(0 → -1rem)<br/>1.5s ease-in-out infinite</div>
+      </div>
+      <div class="motion-card">
+        <div class="motion-float1"></div>
+        <div class="motion-card-title">Blob Float 1 (Warm)</div>
+        <div class="motion-card-spec">blobs_float1<br/>#cbae92 radial gradient<br/>20s ease-in-out infinite</div>
+      </div>
+      <div class="motion-card">
+        <div class="motion-float2"></div>
+        <div class="motion-card-title">Blob Float 2 (Cool)</div>
+        <div class="motion-card-spec">blobs_float2<br/>#94b1c9 radial gradient<br/>25s ease-in-out infinite</div>
+      </div>
+      <div class="motion-card">
+        <div style="display:flex;gap:1.2rem;">
+          <a class="button-link_link__eTf8F" href="#" onclick="return false;" style="transition:all .35s ease-in-out;"><span>Hover me</span></a>
+        </div>
+        <div class="motion-card-title">Button Hover</div>
+        <div class="motion-card-spec">all 0.35s ease-in-out<br/>border-color + background<br/>on :hover state</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
