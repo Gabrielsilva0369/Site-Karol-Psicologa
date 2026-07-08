@@ -41,32 +41,230 @@
 
   <!-- ─── DADOS ESTRUTURADOS (JSON-LD) ─────────────── -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["Psychologist", "LocalBusiness"],
-    "name": "Karol Moreno Psicóloga",
-    "description": "Psicoterapia humanizada especializada em Transtorno de Personalidade Borderline, com atendimento online e presencial nas abordagens DBT e TCC.",
-    "url": "https://www.karolpsicologa.com.br/",
-    "image": "https://www.karolpsicologa.com.br/og-image.jpg",
-    "priceRange": "$$",
-    "medicalSpecialty": "Psychiatric",
-    "knowsAbout": [
-      "Transtorno de Personalidade Borderline",
-      "Terapia Dialética Comportamental (DBT)",
-      "Terapia Cognitivo-Comportamental (TCC)",
-      "Psicoterapia",
-      "Saúde mental"
-    ],
-    "availableLanguage": "pt-BR",
-    "areaServed": "BR",
-    "availableService": {
-      "@type": "MedicalTherapy",
-      "name": "Psicoterapia individual (online e presencial)"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://karolpsicologa.com.br/#business",
+      "name": "Karol Moreno Psicóloga Especialista em Borderline e DBT",
+      "alternateName": "Psicóloga Karol",
+      "description": "Psicóloga especialista em Transtorno de Personalidade Borderline (TPB) e Terapia Comportamental Dialética (DBT). Atendimento online humanizado para adultos com desregulação emocional, borderline e ansiedade. Localizada em Natal, RN.",
+      "url": "https://karolpsicologa.com.br",
+      "logo": "https://karolpsicologa.com.br/logo.png",
+      "image": "https://karolpsicologa.com.br/logo.png",
+      "telephone": "+558498889-3636",
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "Pix, Transferência bancária, Cartão de crédito",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Pastor Jerônimo Gueiros, 677",
+        "addressLocality": "Natal",
+        "addressRegion": "RN",
+        "postalCode": "59020-660",
+        "addressCountry": "BR",
+        "addressArea": "Tirol"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-5.7945",
+        "longitude": "-35.2110"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-84-98889-3636",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/especialistatpb_karolpsi",
+        "https://wa.me/5584988893636",
+        "https://karolpsicologa.com.br"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Psicologia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Psicoterapia online",
+              "description": "Atendimento psicológico individual online para adultos. Sessões por videochamada com foco em regulação emocional e saúde mental."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tratamento para Borderline",
+              "description": "Acompanhamento psicológico especializado em Transtorno de Personalidade Borderline (TPB) com abordagem humanizada e baseada em evidências."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Terapia DBT",
+              "description": "Terapia Comportamental Dialética (DBT) para pessoas com borderline, automutilação e desregulação emocional intensa."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Acompanhamento psicológico",
+              "description": "Acompanhamento psicológico individual para adultos que buscam autoconhecimento, equilíbrio emocional e qualidade de vida."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Terapia para ansiedade",
+              "description": "Atendimento psicológico para ansiedade, crises emocionais e pensamentos intrusivos com foco em regulação emocional."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Terapia para desregulação emocional",
+              "description": "Suporte psicológico especializado para pessoas que sentem emoções com muita intensidade, identificando gatilhos e construindo relações mais saudáveis."
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "8",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Ana Gabrielly Jesus Araújo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Karol é uma profissional excelente, após iniciar o acompanhamento com ela, estou aprendendo a mediar minhas próprias emoções, controle de gastos e identificar gatilhos que antes não conseguia. Karol é uma pessoa e uma profissional maravilhosa, compreensiva e respeitosa."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Tharis S"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Encontrar a Karol foi um divisor de águas na minha vida. Sua forma de ouvir, orientar e acolher faz com que cada sessão seja transformadora. É uma profissional extremamente dedicada, ética e sensível às necessidades."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Rafael Oliveira"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Uma profissional incrivelmente empática, que não diz o que queremos ouvir, mas o que precisa ser ouvido. As sessões comigo foram leves, mas com aprofundamento das dores emocionais. Sem preconceitos, foi muito além do que eu esperava."
+        }
+      ]
     },
-    "sameAs": [
-      "https://www.instagram.com/terapeuta.karol_/"
-    ]
-  }
+
+    {
+      "@type": "Person",
+      "@id": "https://karolpsicologa.com.br/#person",
+      "name": "Ana Karoline de Assunção Moreno",
+      "alternateName": "Psicóloga Karol",
+      "jobTitle": "Psicóloga Especialista em Borderline e DBT",
+      "description": "Psicóloga especialista em Transtorno de Personalidade Borderline (TPB) e Terapia Comportamental Dialética (DBT). Localizada em Natal, RN. Atendimento online para todo o Brasil.",
+      "url": "https://karolpsicologa.com.br",
+      "image": "https://karolpsicologa.com.br/logo.png",
+      "telephone": "+5584988893636",
+      "sameAs": [
+        "https://www.instagram.com/especialistatpb_karolpsi",
+        "https://karolpsicologa.com.br"
+      ],
+      "worksFor": {
+        "@id": "https://karolpsicologa.com.br/#business"
+      },
+      "knowsAbout": [
+        "Transtorno de Personalidade Borderline",
+        "Terapia Comportamental Dialética DBT",
+        "Desregulação Emocional",
+        "Saúde Mental",
+        "Neurodivergência",
+        "Psicoterapia online"
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://karolpsicologa.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o Transtorno de Personalidade Borderline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Transtorno de Personalidade Borderline (TPB) é uma condição de saúde mental caracterizada por instabilidade emocional intensa, medo de abandono, relacionamentos intensos e impulsividade. É também uma neurodivergência que afeta a forma como a pessoa processa as emoções."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a Terapia DBT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Terapia Comportamental Dialética (DBT) é o tratamento com maior evidência científica para o Transtorno de Personalidade Borderline. Ela desenvolve habilidades de regulação emocional, tolerância ao estresse e efetividade interpessoal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o atendimento online com a Psicóloga Karol?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O atendimento é realizado por videochamada, de forma segura e sigilosa. Você agenda sua consulta pelo WhatsApp e realiza a sessão de onde estiver, para todo o Brasil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Borderline tem cura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Transtorno de Personalidade Borderline tem tratamento eficaz. Com acompanhamento psicológico especializado, especialmente com a Terapia DBT, é possível regular as emoções, melhorar os relacionamentos e ter qualidade de vida."
+          }
+        }
+      ]
+    }
+
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2899,7 +3097,7 @@
               </div>
             </a>
 
-            <a href="https://www.tiktok.com/@terepauta.karoldbt" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <a href="https://www.tiktok.com/@terapeuta.karoldbt" target="_blank" rel="noopener noreferrer" class="footer-social-link">
               <div class="footer-social-icon" style="background:#000;">
                 <svg viewBox="0 0 24 24" fill="#fff">
                   <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
@@ -2907,7 +3105,7 @@
               </div>
               <div>
                 <p class="footer-social-info-name">TikTok</p>
-                <p class="footer-social-info-handle">@terepauta.karoldbt</p>
+                <p class="footer-social-info-handle">@terapeuta.karoldbt</p>
               </div>
             </a>
 
