@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: trocar pelo domínio real quando publicar
 Sitemap: https://www.karolpsicologa.com.br/sitemap.xml
